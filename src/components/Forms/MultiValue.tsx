@@ -2,7 +2,6 @@ import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
 import { SxProps } from '@mui/material';
 
 type TAutocompleteProps = {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import { SxProps, useTheme } from '@mui/material';
+import { SxProps } from '@mui/material';
 
 type Option = {
   label: string;

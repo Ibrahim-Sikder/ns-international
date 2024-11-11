@@ -1,62 +1,133 @@
-"use client"
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import slide1 from "../../../../public/assets/doctorsCare/slider/2.jpg";
-import slide2 from "../../../../public/assets/doctorsCare/slider/6.jpg";
-import slide3 from "../../../../public/assets/doctorsCare/slider/3.jpg";
-import slide4 from "../../../../public/assets/doctorsCare/slider/4.jpg";
-import slide5 from "../../../../public/assets/doctorsCare/slider/5.jpg";
-import Image from 'next/image';
+"use client";
 
-const schools = [
+import React, { useState } from "react";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+// Import images
+import img1 from "../../../../public/assets/slider/s1.jpg";
+import img2 from "../../../../public/assets/slider/s2.jpg";
+import img3 from "../../../../public/assets/slider/s1.jpg";
+import img4 from "../../../../public/assets/slider/s2.jpg";
+import { Autoplay } from "swiper/modules";
+
+// Import required modules
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import Image from "next/image";
+import { Button } from "@mui/material";
+
+import "./Slider.css";
+
+// Array of slide data
+const slides = [
   {
-    name: "Doctors Care Model School",
-    est: "Est. 2021",
-    img: slide1,
+    img: img1,
+    h5Text1: "The shore hat this group would some",
+    h1Text: "Free you may not be right for some.",
+    h5Text2: "Might be right for these days",
   },
   {
-    name: "Doctors Care Model School ",
-    est: "Est. 2021",
-    img: slide2,
+    img: img2,
+    h5Text1: "The shore hat this group would some",
+    h1Text: "Free you may not be right for some.",
+    h5Text2: "Might be right for these days",
   },
   {
-    name: "Doctors Care Model School",
-    est: "Est. 2021",
-    img: slide3,
+    img: img3,
+    h5Text1: "The shore hat this group would some",
+    h1Text: "Free you may not be right for some.",
+    h5Text2: "Might be right for these days",
   },
   {
-    name: "Doctors Care Model School",
-    est: "Est. 2021",
-    img: slide4,
-  },
-  {
-    name: "Doctors Care Model School",
-    est: "Est. 2021",
-    img: slide5,
+    img: img4,
+    h5Text1: "The shore hat this group would some",
+    h1Text: "Free you may not be right for some.",
+    h5Text2: "Might be right for these days",
   },
 ];
-const Slider = () => {
-  return (
-    <div className="flex justify-center align-middle items-center w-auto">
-      <Carousel autoPlay infiniteLoop showStatus={false} showThumbs={false}>
-        {/* first slide */}
-        {schools.map((item) => (
-          <div className="h-[500px]" key={item.name}>
 
-            <Image src={item.img}
-              alt="Image 1" className="h-52 md:h-full lg:h-auto w-auto" />
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center lg:pl-0">
-              <h2 className="text-lg lg:text-4xl font-bold lg:mb-4 text-white">
-                {item.name}
-              </h2>
-              <p className="text-white mb-3 text-[10px] lg:text-base">
-                {item.est}
-              </p>
+const Slider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  return (
+    <>
+      <Swiper
+        spaceBetween={30}
+        effect={"fade"}
+        navigation={true}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, EffectFade, Navigation, Pagination]}
+        className="mySwiper"
+        onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full h-[700px]">
+              <Image
+                src={slide.img}
+                alt={`Slide ${index + 1}`}
+                layout="fill"
+                objectFit="cover"
+              />
+              {/* Add overlay for text readability */}
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white font-bold space-y-10">
+                <motion.h5
+                  className="text-xl text-animation"
+                  initial={{ opacity: 0, x: -20 }} // Start position: off-screen to the left
+                  animate={{
+                    opacity: currentSlide === index ? 1 : 0,
+                    x: currentSlide === index ? 0 : -20, // Move to normal position
+                  }}
+                  transition={{ duration: 0.9 }}
+                >
+                  {slide.h5Text1}
+                </motion.h5>
+
+                <motion.h5
+                  className="text-xl text-animation"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{
+                    opacity: currentSlide === index ? 1 : 0,
+                    x: currentSlide === index ? 0 : -20,
+                  }}
+                  transition={{ duration: 0.9 }}
+                >
+                  {slide.h5Text2}
+                </motion.h5>
+
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: currentSlide === index ? 1 : 0,
+                    y: currentSlide === index ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.9 }}
+                >
+                  <Button>Discover More</Button>
+                </motion.h1>
+              </div>
             </div>
-          </div>))}
-      </Carousel>
-    </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from "react";
 import { SxProps } from "@mui/system";
 import TextareaAutosize from "@mui/material/TextareaAutosize";

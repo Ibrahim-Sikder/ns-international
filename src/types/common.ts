@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { USER_ROLE } from "@/constant/role";
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
@@ -20,10 +22,6 @@ export const TLeaveStatus = ["Pending","Accepted","Cancel"];
 export const TLeave = ["Casual Leave","Annual Leave"];
 export const TApplication = ["Testimonial","Transfer Certificate ","Transcript", "Certificate", ''];
 export const TEmployee = ["Testimonial",];
-
-
-
-
 
 export type IMeta = {
     page: number;

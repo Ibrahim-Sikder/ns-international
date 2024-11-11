@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 import "./Header.css";
 import Image from "next/image";
-import logo from "../../../../public/assets/logo/ns-international.png";
+import logo from "../../../../public/assets/logo/nsinternational.png";
 
 const Header = () => {
   const [isClick, setIsClick] = useState(false);
@@ -77,7 +77,7 @@ const Header = () => {
 
   return (
     <>
-      <div className=" h-10 lg:h-20 z-10 pb-1 w-full">
+      <div className=" h-10 lg:h-20 z-10 pb-1 w-full bg-gray-100">
         <div className="w-full  lg:h-20 mx-auto items-center justify-center lg:flex gap-20">
           <Image src={logo} className="h-14 w-28" alt="logo" />
           {/* <h1>Header</h1> */}

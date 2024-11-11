@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const joditConfig = {
     uploader: {
       url: `${process.env.NEXT_PUBLIC_BASE_API_URL}/uploads`,

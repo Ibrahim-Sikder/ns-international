@@ -1,5 +1,5 @@
-import Image from "next/image";
-import logo from "../../../../public/assets/doctors.png";
+// import Image from "next/image";
+// import logo from "../../../../public/assets/doctors.png";
 import Link from "next/link";
 // import Image from "next/image";
 // import Logo from "../common/Logo";

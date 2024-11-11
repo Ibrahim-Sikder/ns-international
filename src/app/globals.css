@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif, "SolaimanLipi";
+  font-family: "Roboto", sans-serif, "SolaimanLipi", "Faculty_Glyphic";
 
 }
 body,
@@ -24,6 +24,17 @@ html {
     font-weight: normal;
     font-style: normal;
   }
+
+@font-face {
+    font-family: 'Faculty_Glyphic';
+    src: url('/fonts/Faculty_Glyphic,Roboto_Condensed,Ubuntu/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
 .sectionMargin{
   margin-top:100px;
 }
