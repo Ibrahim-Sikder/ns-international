@@ -8,6 +8,10 @@ import { GrClose } from "react-icons/gr";
 import "./Header.css";
 import Image from "next/image";
 import logo from "../../../../public/assets/logo/nsinternational.png";
+// import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+// import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
+import location from "../../../../public/assets/icon/placeholder.png";
+import chat from "../../../../public/assets/icon/chat.png";
 
 const Header = () => {
   const [isClick, setIsClick] = useState(false);
@@ -78,10 +82,18 @@ const Header = () => {
   return (
     <>
       <div className=" h-10 lg:h-20 z-10 pb-1 w-full bg-gray-100">
-        <div className="w-full  lg:h-20 mx-auto items-center justify-center lg:flex gap-20">
-          <Image src={logo} className="h-14 w-28" alt="logo" />
+        <div className="w-full  lg:h-20 mx-auto items-center justify-between lg:flex gap-20 px-24">
+          <Image src={logo} className="h-16 w-28" alt="logo" />
           {/* <h1>Header</h1> */}
           <div className="lg:flex hidden">{navMenu}</div>
+          <div className="flex gap-6">
+          <Image src={location} className="h-[50px] w-[50px]" alt="location Icon" />
+          <Image src={chat} className="h-[50px] w-[50px]" alt="location Icon" />
+            {/* <LocationOnOutlinedIcon sx={{ height: "40px", width: "40px" }} />
+
+            <ForumOutlinedIcon sx={{ height: "40px", width: "40px" }} /> */}
+
+          </div>
           {/* <Link href="/login">
             <h5 className="hidden lg:flex gap-2 items-center">
               Log In <FaArrowRightLong />

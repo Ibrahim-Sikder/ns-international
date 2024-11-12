@@ -1,9 +1,12 @@
+import About from "@/components/ui/HomePage/About/About";
+import DevelopmentSlider from "@/components/ui/HomePage/DevelopmentSlider/DevelopmentSlider";
 
 
 export default function Home() {
   return (
     <main>
-      <h1>this is hero section</h1>
+      <About/>
+      <DevelopmentSlider/>
     </main>
   );
 }

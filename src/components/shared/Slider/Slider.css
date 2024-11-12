@@ -1,20 +1,4 @@
-#app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
 
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
 
 .swiper {
   width: 100%;
@@ -59,9 +43,9 @@ body {
 }
 
 .text-animation {
-  animation: slideInLeft 1s ease-out; /* Text will slide in from the left */
+  animation: slideInLeft 1s ease-out; /* Text slide from the left */
 }
 
 .text-animation-delay {
-  animation: slideInRight 1s ease-out forwards 0.5s; /* Text will slide in from the right with a delay */
+  animation: slideInRight 1s ease-out forwards 0.5s; /* Text slide from the right with delay */
 }
