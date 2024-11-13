@@ -21,7 +21,7 @@ const Header = () => {
 
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
+    { href: "/super-admin/about", label: "About Us" },
     {
       label: "Service",
       submenu: [
