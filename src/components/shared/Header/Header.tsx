@@ -42,11 +42,12 @@ const Header = () => {
     { href: "/complain", label: "Compliance & Ethics" },
     {
       label: "Products",
+      href: "/super-admin/products",
       submenu: [
-        { href: "/", label: "Woven" },
-        { href: "/", label: "Knit" },
-        { href: "/", label: "Sweater" },
-        { href: "/", label: "Homewear & Others" },
+        { href: "/super-admin/products/woven", label: "Woven" },
+        { href: "/super-admin/products/knit", label: "Knit" },
+        { href: "/super-admin/products/sweater", label: "Sweater" },
+        { href: "/super-admin/products/homewear", label: "Homewear & Others" },
       ],
     },
     { href: "/contact", label: "Contact Us" },
@@ -87,12 +88,19 @@ const Header = () => {
           {/* <h1>Header</h1> */}
           <div className="lg:flex hidden">{navMenu}</div>
           <div className="flex gap-6">
-          <Image src={location} className="h-[50px] w-[50px]" alt="location Icon" />
-          <Image src={chat} className="h-[50px] w-[50px]" alt="location Icon" />
+            <Image
+              src={location}
+              className="h-[50px] w-[50px]"
+              alt="location Icon"
+            />
+            <Image
+              src={chat}
+              className="h-[50px] w-[50px]"
+              alt="location Icon"
+            />
             {/* <LocationOnOutlinedIcon sx={{ height: "40px", width: "40px" }} />
 
             <ForumOutlinedIcon sx={{ height: "40px", width: "40px" }} /> */}
-
           </div>
           {/* <Link href="/login">
             <h5 className="hidden lg:flex gap-2 items-center">
