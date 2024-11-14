@@ -12,7 +12,7 @@ type TTextareaProps = {
   required?: boolean;
 };
 
-const DCSTextArea = ({
+const NSTextArea = ({
   name,
   placeholder,
   minRows = 2,
@@ -41,6 +41,7 @@ const DCSTextArea = ({
           style={{
             width: "100%",
             maxHeight: "100px",
+            border:"1px solid gray",
             ...(sx as React.CSSProperties),
           }}
         />
@@ -49,4 +50,4 @@ const DCSTextArea = ({
   );
 };
 
-export default DCSTextArea;
+export default NSTextArea;

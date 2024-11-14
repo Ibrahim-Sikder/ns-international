@@ -45,7 +45,7 @@ const getStyles = (
   };
 };
 
-const DCSMultiSelect: React.FC<ITAMultiSelect> = ({
+const NSMultiSelect: React.FC<ITAMultiSelect> = ({
   name,
   label,
   items,
@@ -130,4 +130,4 @@ const DCSMultiSelect: React.FC<ITAMultiSelect> = ({
   );
 };
 
-export default DCSMultiSelect;
+export default NSMultiSelect;

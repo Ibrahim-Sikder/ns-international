@@ -10,8 +10,8 @@ import Image from "next/image";
 import logo from "../../../../public/assets/logo/nsinternational.png";
 // import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 // import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
-import location from "../../../../public/assets/icon/placeholder.png";
-import chat from "../../../../public/assets/icon/chat.png";
+import location from "../../../../public/assets/icon/location23.png";
+import chat from "../../../../public/assets/icon/chat1.png";
 
 const Header = () => {
   const [isClick, setIsClick] = useState(false);
@@ -49,7 +49,7 @@ const Header = () => {
         { href: "/", label: "Homewear & Others" },
       ],
     },
-    { href: "/contact", label: "Contact Us" },
+    { href: "/super-admin/contact", label: "Contact Us" },
   ];
 
   const navMenu = (
@@ -87,8 +87,8 @@ const Header = () => {
           {/* <h1>Header</h1> */}
           <div className="lg:flex hidden">{navMenu}</div>
           <div className="flex gap-6">
-          <Image src={location} className="h-[50px] w-[50px]" alt="location Icon" />
-          <Image src={chat} className="h-[50px] w-[50px]" alt="location Icon" />
+          <Image src={location} className="h-[40px] w-[30px] " alt="location Icon" />
+          <Image src={chat} className="h-[40px] w-[40px]" alt="location Icon" />
             {/* <LocationOnOutlinedIcon sx={{ height: "40px", width: "40px" }} />
 
             <ForumOutlinedIcon sx={{ height: "40px", width: "40px" }} /> */}

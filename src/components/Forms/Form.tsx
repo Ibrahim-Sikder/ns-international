@@ -19,7 +19,7 @@ type TInputProps = {
   onSubmit: SubmitHandler<FieldValues>;
 } & TFormConfig;
 
-const DCSForm = ({
+const NSForm = ({
   children,
   onSubmit,
   resolver,
@@ -48,4 +48,4 @@ const DCSForm = ({
   );
 };
 
-export default DCSForm;
+export default NSForm;
