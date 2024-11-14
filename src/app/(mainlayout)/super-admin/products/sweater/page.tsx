@@ -16,6 +16,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { IoCloseSharp } from "react-icons/io5";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import Banner from "@/components/shared/Banner/Banner";
 
 const products = [
   { image: img1 },
@@ -52,6 +53,7 @@ const Sweater = () => {
 
   return (
     <div className="bg-gray-100">
+      <Banner title="Sweater" />
       <Container className="py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {products.map((product, index) => (

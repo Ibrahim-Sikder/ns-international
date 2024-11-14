@@ -7,6 +7,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
 import Container from "@/components/ui/Container/Container";
 import Link from "next/link";
+import Banner from "@/components/shared/Banner/Banner";
 
 const products = [
   {
@@ -38,6 +39,7 @@ const products = [
 const Products = () => {
   return (
     <div className="bg-gray-100">
+      <Banner title="Products" />
       <Container>
         <div className="py-20">
           <h2 className="text-sm uppercase text-blue-800 mb-2 text-center">
