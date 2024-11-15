@@ -2,6 +2,7 @@
 
 import "./style.css";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@mui/material";
 import XIcon from "@mui/icons-material/X";
 import NSForm from "@/components/Forms/Form";
@@ -10,15 +11,18 @@ import EmailIcon from "@mui/icons-material/Email";
 import NSTextArea from "@/components/Forms/TextArea";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import img1 from "../../../assets/images/contact/R.jpg";
+import img2 from "../../../assets/images/contact/c.jpg";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Container from "@/components/ui/Container/Container";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
-import Image from "next/image";
-import img1 from "../../../../assets/images/contact/R.jpg";
-import img2 from "../../../../assets/images/contact/c.jpg";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import Banner from "@/components/shared/Banner/Banner";
+
 
 const Page = () => {
   const handleSubmit = () => {
@@ -26,12 +30,13 @@ const Page = () => {
   };
   return (
     <>
+    <Banner title="Contact Us"/>
       <Container>
         <div className="items-center justify-center content-center  mx-2 md:mx-0 lg:mx-auto my-10">
           {/* top part */}
           <div className="my-10">
             <div className="flex ">
-              <div className="relative w-1/3 h-64 bg-cover bg-center ">
+              <div className="relative w-1/3 h-64 bg-cover bg-center flex flex-col items-center justify-center content-center p-5">
                 <div className="absolute inset-0 -z-10 rounded-l-xl">
                   <Image
                     src={img1}
@@ -43,27 +48,45 @@ const Page = () => {
                 </div>
                 <div className="absolute inset-0 bg-black opacity-60 rounded-l-xl"></div>
 
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                  <div className="">
-                    <LocalPhoneIcon />
+                <div className="absolute text-center text-white space-y-4">
+                  <div className="mb-2">
+                    <LocalPhoneIcon
+                      sx={{
+                        background: "#EAEAEA",
+                        padding: "4px",
+                        borderRadius: "5px",
+                        height: "40px",
+                        width: "40px",
+                        color: "#1E3A8A",
+                      }}
+                    />
                   </div>
-                  <div className="text-3xl font-bold">123</div>
-                  <p className="mt-2">This is a description text.</p>
+                  <h3 className="">+8801234567890</h3>
+                  <p className="mt-2">Call Us at 9.00am - 10.00pm</p>
                 </div>
               </div>
 
-              <div className="relative w-1/3 bg-[#EAEAEA] h-[300px] p-6 -mt-[22px] rounded-lg flex flex-col items-center justify-center">
+              <div className="relative w-1/3 bg-[#EAEAEA] h-[300px] -mt-[22px] rounded-lg flex flex-col items-center justify-center content-center p-5">
                 <div className="absolute inset-0 opacity-50"></div>{" "}
-                <div className="relative z-10 text-center flex flex-col items-center justify-center">
+                <div className="relative z-10 text-center flex flex-col items-center justify-center space-y-4">
                   <div className="">
-                    <LocalPhoneIcon />
+                    <MailOutlineIcon
+                      sx={{
+                        background: "#1E3A8A",
+                        padding: "4px",
+                        borderRadius: "5px",
+                        height: "40px",
+                        width: "40px",
+                        color: "white",
+                      }}
+                    />
                   </div>
-                  <div className="text-3xl font-bold">info@example.com</div>
+                  <h3 className="">info@example.com</h3>
                   <p className="mt-2">Feel free to contact us via email.</p>
                 </div>
               </div>
 
-              <div className="relative w-1/3 h-64 bg-cover bg-center">
+              <div className="relative w-1/3 h-64 bg-cover bg-center flex flex-col items-center justify-center content-center p-5">
                 <div className="absolute inset-0 -z-10 ">
                   <Image
                     src={img2}
@@ -74,13 +97,22 @@ const Page = () => {
                   />
                 </div>
                 <div className="absolute inset-0 bg-black opacity-70 rounded-r-xl"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                <div className="absolute text-center text-white space-y-4">
                   <div className="">
-                    <LocalPhoneIcon />
+                    <LocationOnIcon
+                      sx={{
+                        background: "#EAEAEA",
+                        padding: "4px",
+                        borderRadius: "5px",
+                        height: "40px",
+                        width: "40px",
+                        color: "#1E3A8A",
+                      }}
+                    />
                   </div>
-                  <div className="text-3xl font-bold">
+                  <h3 className="">
                     123 Street Name, City
-                  </div>
+                  </h3>
                   <p className="mt-2">Visit us at our office location.</p>
                 </div>
               </div>
@@ -89,13 +121,13 @@ const Page = () => {
 
           {/* middle part */}
           <div className="grid lg:max-w-screen-xl grid-cols-1 lg:gap-10 mx-auto md:grid-cols-2 px-1 md:px-8 lg:px-10 py-1 md:py-5 lg:py-5  text-gray-800  justify-center ">
-            <div className="p-12 shadow-lg">
+            <div className="p-12 shadow-lg border">
               <NSForm onSubmit={handleSubmit}>
                 <div className="space-y-8">
                   <div>
                     <NSInput
-                      name="cname"
-                      label="Company Name"
+                      name="name"
+                      label="Full Name"
                       size="medium"
                       fullWidth
                     />
@@ -112,6 +144,14 @@ const Page = () => {
                     <NSInput
                       name="phone"
                       label="Phone Number"
+                      size="medium"
+                      fullWidth
+                    />
+                  </div>
+                  <div>
+                    <NSInput
+                      name="cname"
+                      label="Company Name"
                       size="medium"
                       fullWidth
                     />

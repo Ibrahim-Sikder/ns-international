@@ -1,5 +1,6 @@
 import Image from "next/image";
 import image2 from "../../../assets/images/footer/bgiamge.jpg";
+// import logo from "../../../assets/images/footer/logo-(1).png";
 import Link from "next/link";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
@@ -8,6 +9,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
+    <>
     <div className="">
       <div className="relative">
         <div className="absolute inset-0 -z-10">
@@ -18,6 +20,7 @@ const Footer = () => {
           <div className="py-12  text-gray-400">
             <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
+                {/* <Image src={logo} alt="Background"  className="w-[180px] h-[80px]"  /> */}
                 <h3 className="text-2xl font-bold text-white mb-4">
                   NS International
                 </h3>
@@ -76,6 +79,9 @@ const Footer = () => {
                 </h4>
                 <p>457 Morningview Lane, New York</p>
                 <p>07:00 AM - 18:00 PM</p>
+                <h4 className="text-xl font-semibold text-white my-4">
+                Contact Us
+                </h4>
                 <p>+1 (234) 567 890</p>
                 <p>example@mail.com</p>
               </div>
@@ -186,6 +192,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
