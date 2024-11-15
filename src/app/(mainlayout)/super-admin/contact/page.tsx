@@ -1,20 +1,24 @@
 "use client";
 
 import "./style.css";
-import Container from "@/components/ui/Container/Container";
-import { Button } from "@mui/material";
-import NSInput from "@/components/Forms/Input";
-import NSForm from "@/components/Forms/Form";
-import NSTextArea from "@/components/Forms/TextArea";
-import LocationCityIcon from "@mui/icons-material/LocationCity";
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import EmailIcon from "@mui/icons-material/Email";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from "@mui/icons-material/X";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-// import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
+import { Button } from "@mui/material";
+import XIcon from "@mui/icons-material/X";
+import NSForm from "@/components/Forms/Form";
+import NSInput from "@/components/Forms/Input";
+import EmailIcon from "@mui/icons-material/Email";
+import NSTextArea from "@/components/Forms/TextArea";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import Container from "@/components/ui/Container/Container";
+import LocationCityIcon from "@mui/icons-material/LocationCity";
+import Image from "next/image";
+import img1 from "../../../../assets/images/contact/R.jpg";
+import img2 from "../../../../assets/images/contact/c.jpg";
 
 const Page = () => {
   const handleSubmit = () => {
@@ -23,23 +27,75 @@ const Page = () => {
   return (
     <>
       <Container>
-        <div className="items-center justify-center content-center  mx-2 md:mx-0 lg:mx-auto">
-          {/* email */}
-          {/* <div className="md:w-64 lg:w-64 mx-auto py-4 md:py-8 lg:py-10">
-            <h3 className="text-xl   border-y-4 text-center py-1 md:py-3 lg:py-3">
-              Send Us a Email
-            </h3>
-          </div> */}
+        <div className="items-center justify-center content-center  mx-2 md:mx-0 lg:mx-auto my-10">
+          {/* top part */}
+          <div className="my-10">
+            <div className="flex ">
+              <div className="relative w-1/3 h-64 bg-cover bg-center ">
+                <div className="absolute inset-0 -z-10 rounded-l-xl">
+                  <Image
+                    src={img1}
+                    alt="Background"
+                    fill
+                    className="rounded-l-xl"
+                    priority
+                  />
+                </div>
+                <div className="absolute inset-0 bg-black opacity-60 rounded-l-xl"></div>
 
-          <div className="grid lg:max-w-screen-xl grid-cols-1 lg:gap-5 mx-auto md:grid-cols-2 px-1 md:px-8 lg:px-10 py-1 md:py-5 lg:py-5  text-gray-800  justify-center ">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                  <div className="">
+                    <LocalPhoneIcon />
+                  </div>
+                  <div className="text-3xl font-bold">123</div>
+                  <p className="mt-2">This is a description text.</p>
+                </div>
+              </div>
+
+              <div className="relative w-1/3 bg-[#EAEAEA] h-[300px] p-6 -mt-[22px] rounded-lg flex flex-col items-center justify-center">
+                <div className="absolute inset-0 opacity-50"></div>{" "}
+                <div className="relative z-10 text-center flex flex-col items-center justify-center">
+                  <div className="">
+                    <LocalPhoneIcon />
+                  </div>
+                  <div className="text-3xl font-bold">info@example.com</div>
+                  <p className="mt-2">Feel free to contact us via email.</p>
+                </div>
+              </div>
+
+              <div className="relative w-1/3 h-64 bg-cover bg-center">
+                <div className="absolute inset-0 -z-10 ">
+                  <Image
+                    src={img2}
+                    alt="Background"
+                    fill
+                    className="rounded-r-xl"
+                    priority
+                  />
+                </div>
+                <div className="absolute inset-0 bg-black opacity-70 rounded-r-xl"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                  <div className="">
+                    <LocalPhoneIcon />
+                  </div>
+                  <div className="text-3xl font-bold">
+                    123 Street Name, City
+                  </div>
+                  <p className="mt-2">Visit us at our office location.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* middle part */}
+          <div className="grid lg:max-w-screen-xl grid-cols-1 lg:gap-10 mx-auto md:grid-cols-2 px-1 md:px-8 lg:px-10 py-1 md:py-5 lg:py-5  text-gray-800  justify-center ">
             <div className="p-12 shadow-lg">
               <NSForm onSubmit={handleSubmit}>
-                {/* <NSForm onSubmit={handleSubmit} className="space-y-6 border-[1px] shadow-md p-2"> */}
                 <div className="space-y-8">
                   <div>
                     <NSInput
-                      name="fname"
-                      label="Full Name"
+                      name="cname"
+                      label="Company Name"
                       size="medium"
                       fullWidth
                     />
@@ -54,6 +110,14 @@ const Page = () => {
                   </div>
                   <div>
                     <NSInput
+                      name="phone"
+                      label="Phone Number"
+                      size="medium"
+                      fullWidth
+                    />
+                  </div>
+                  <div>
+                    <NSInput
                       name="sub"
                       label="Subject"
                       size="medium"
@@ -62,7 +126,12 @@ const Page = () => {
                   </div>
 
                   <div>
-                    <NSTextArea name="textarea" minRows={5} />
+                    <NSTextArea
+                      name="textarea"
+                      minRows={5}
+                      placeholder="Write Your Message"
+                      sx={{ padding: "4px" }}
+                    />
                   </div>
 
                   <Button size="large">Send Message</Button>
@@ -70,101 +139,109 @@ const Page = () => {
               </NSForm>
             </div>
             <div className="lg:w-full">
-              <div className="space-y-8">
-                {/* Contact Us Title with Underline */}
+              <div className="space-y-6 mt-10">
                 <div>
-                  <h5 className="border-b-4 border-indigo-600 inline-block pb-2">
+                  <h5 className="border-b-4 border-blue-700 inline-block pb-2">
                     Contact Us
                   </h5>
                 </div>
-
-                {/* "Get In Touch" Title */}
                 <h2 className=" text-gray-800">Get In Touch</h2>
-
-                {/* Paragraph */}
                 <p className="text-lg text-gray-600">
                   We&apos;re always here to assist you with any questions or
                   support you need. Feel free to reach out to us through the
                   following options.
                 </p>
-
-                {/* Two Part Section */}
                 <div className="flex gap-8 space-y-2">
                   <div className="space-y-10">
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-indigo-600 text-white rounded-full">
+                      <div className="p-4 bg-blue-800 text-white rounded-full">
                         <LocationCityIcon />
                       </div>
                       <div>
-                        <h4 className="  text-xl">Office Location</h4>
-                        <p className="text-gray-600">
+                        <h4 className="font-bold">Office Location</h4>
+                        <p className="text-sm text-gray-600">
                           456 Office Park, Building 12, City, Country
                         </p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-indigo-600 text-white rounded-full">
+                      <div className="p-4 bg-blue-800 text-white rounded-full">
                         <LocalPhoneIcon />
                       </div>
                       <div>
-                        <h4 className="  text-xl">Phone</h4>
-                        <h5 className="text-sm text-gray-600">+1 800 123 4567</h5>
+                        <h4 className="font-bold">Phone</h4>
+                        <h5 className="text-sm text-gray-600">
+                          +1 800 123 4567
+                        </h5>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-10">
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-indigo-600 text-white rounded-full">
+                      <div className="p-4 bg-blue-800 text-white rounded-full">
                         <ApartmentIcon />
                       </div>
                       <div>
-                        <h4 className="  text-xl">Address</h4>
+                        <h4 className="font-bold">Address</h4>
                         <p className="text-sm text-gray-600">
                           123 Business Ave, Suite 456, City, Country
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-center space-x-4 mt-[16px]">
-                      <div className="p-4 bg-indigo-600 text-white rounded-full">
+                    <div className="flex items-center space-x-4 mt-[10px]">
+                      <div className="p-4 bg-blue-800 text-white rounded-full">
                         <EmailIcon />
                       </div>
                       <div>
-                        <h4 className="  text-xl">Email</h4>
-                        <p className="text-sm text-gray-600">contact@company.com</p>
+                        <h4 className="font-bold">Email</h4>
+                        <p className="text-sm text-gray-600">
+                          contact@company.com
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Divider Line */}
                 <hr className="my-8 border-t-2 border-gray-300" />
 
-                {/* Our Social Media Title */}
-                <h3 className="text-3xl font-bold text-gray-800">
-                  Our Social Media
-                </h3>
+                {/* Social Media  */}
+                <h3 className=" text-gray-800">Our Social Media</h3>
+                <div className="flex space-x-1 ">
+                  {/* fb */}
+                  <Link href="https://facebook.com" className="">
+                    <button className="p-2 bg-blue-600 text-white rounded-full">
+                      <FacebookIcon />
+                    </button>
+                  </Link>
 
-                {/* Social Icons */}
-                <div className="flex space-x-6 mt-4">
-                  <Link
-                    href="https://facebook.com"
-                    className="text-blue-600 hover:text-blue-800"
-                  >
-                    <FacebookIcon />
+                  {/* x */}
+                  <Link href="https://instagram.com" className="">
+                    <button className="p-2 bg-black text-white rounded-full">
+                      <XIcon />
+                    </button>
                   </Link>
-                  <Link
-                    href="https://instagram.com"
-                    className="text-pink-600 hover:text-pink-800"
-                  >
-                    <XIcon />
+
+                  {/* youtube */}
+                  <Link href="https://twitter.com" className="">
+                    <button className="p-2 bg-red-600 text-white rounded-full">
+                      <YouTubeIcon />
+                    </button>
                   </Link>
-                  <Link
-                    href="https://twitter.com"
-                    className="text-red-400 hover:text-red-600"
-                  >
-                    <YouTubeIcon />
+
+                  {/* instagram */}
+                  <Link href="https://twitter.com" className="">
+                    <button className="p-2 bg-[#E1306C] text-white rounded-full">
+                      <InstagramIcon />
+                    </button>
+                  </Link>
+
+                  {/* LinkedIn */}
+                  <Link href="https://twitter.com" className="">
+                    <button className="p-2 bg-[#0A66C2] text-white rounded-full">
+                      <LinkedInIcon />
+                    </button>
                   </Link>
                 </div>
               </div>

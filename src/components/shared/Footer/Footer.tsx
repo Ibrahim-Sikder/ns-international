@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import Image from "next/image";
 import image2 from "../../../assets/images/footer/bgiamge.jpg";
 import Link from "next/link";
@@ -10,22 +9,19 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 const Footer = () => {
   return (
     <div className="">
-      {/* Section 1: Background Image Section */}
       <div className="relative">
-        {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image src={image2} alt="Background" fill className="" priority />
         </div>
-        {/* Overlay Content */}
+
         <div className="bg-black bg-opacity-10 py-16">
           <div className="py-12  text-gray-400">
             <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-              {/* Company Info */}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Texifin</h3>
-                <p className="mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  NS International
+                </h3>
+                <p className="mb-4">Comitted to Best Quality Product</p>
                 <div className="flex space-x-4">
                   <Link
                     href="#"
@@ -73,7 +69,7 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              {/* Visit Us */}
+
               <div>
                 <h4 className="text-xl font-semibold text-white mb-4">
                   Visit Us
@@ -83,7 +79,7 @@ const Footer = () => {
                 <p>+1 (234) 567 890</p>
                 <p>example@mail.com</p>
               </div>
-              {/* Explore Links */}
+
               <div>
                 <h4 className="text-xl font-semibold text-white mb-4">
                   Explore
@@ -120,7 +116,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              {/* Support Links */}
+
               <div>
                 <h4 className="text-xl font-semibold text-white mb-4">
                   Support
@@ -161,15 +157,15 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            {/* Copyright */}
+
             <div className="mt-8  pt-6">
               <div className="flex justify-between mx-auto max-w-7xl border-t border-gray-700">
-                <p>
+                <p className="pt-2">
                   Copyright © 2024{" "}
                   <span className="text-blue-400">NS International</span>. All
                   Rights Reserved
                 </p>
-                <div className="flex items-center">
+                <div className="flex items-center pt-2">
                   <Link
                     href="/privacy-policy"
                     className="text-gray-400 hover:text-white"
