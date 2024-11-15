@@ -16,7 +16,7 @@ interface IDatePicker {
   disablePast?: boolean;
 }
 
-const DCSDatePicker = ({
+const NSDatePicker = ({
   name,
   size = "small",
   label,
@@ -60,4 +60,4 @@ const DCSDatePicker = ({
   );
 };
 
-export default DCSDatePicker;
+export default NSDatePicker;

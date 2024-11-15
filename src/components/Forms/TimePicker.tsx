@@ -16,7 +16,7 @@ interface ITimePicker {
   sx?: SxProps;
 }
 
-const DCSTimePicker = ({
+const NSTimePicker = ({
   name,
   label,
   size = "small",
@@ -64,4 +64,4 @@ const DCSTimePicker = ({
   );
 };
 
-export default DCSTimePicker;
+export default NSTimePicker;

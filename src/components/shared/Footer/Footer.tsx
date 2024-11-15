@@ -1,191 +1,195 @@
-// import Image from "next/image";
-// import logo from "../../../../public/assets/doctors.png";
+// components/Footer.tsx
+import Image from "next/image";
+import image2 from "../../../assets/images/footer/bgiamge.jpg";
 import Link from "next/link";
-// import Image from "next/image";
-// import Logo from "../common/Logo";
-import {
-  DevicePhoneMobileIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-} from "@heroicons/react/20/solid";
-import Container from "@/components/ui/Container/Container";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
-
-const navigation = {
-  solutions: [
-    { name: "Events", href: "/about/events" },
-    { name: "Achievments", href: "/about/achievement" },
-    { name: "History", href: "/about/history" },
-    { name: "Contact", href: "/contact" },
-    { name: "Quick Link", href: "/quick-link" },
-  ],
-  support: [
-    { name: "Class Schedule", href: "#" },
-    { name: "Administrative Body", href: "/administration/administrativeBody" },
-    { name: "Teachers", href: "/administration/teachingStaff" },
-    { name: "Office Staff", href: "/administration/officeStaff" },
-  ],
-  result: [
-    { name: "School", href: "/result/schoolResult" },
-    { name: "College", href: "/result/collegeResult" },
-    { name: "English Vesion", href: "/result/englishVersionResult" },
-    { name: "Notice", href: "/notice" },
-    // { name: "Partners", href: "#" },
-  ],
-  admission: [
-    { name: "Admission Info", href: "/admission/admissionInfo" },
-    { name: "School", href: "/admission/schoolAdmission" },
-    { name: "College", href: "/admission/collegeAdmission" },
-    { name: "English Version", href: "/admission/englishAdmission" },
-  ],
-};
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 sectionMargin " aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
-        Footer
-      </h2>
-      <Container>
-        <div className="mx-auto px-6 pb-8 pt-5 lg:px-0 lg:pt-10">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8 mb-3 lg:mb-2">
-            <div className="max-w-full lg:max-w-lg  mx-auto">
-              <div className="space-y-4 flex flex-col items-center lg:items-start justify-between">
-                <div className="text-center md:text-center lg:text-left">
-                  <Link href={"/"}>
-                    <h2 className="font-bold text-2xl">Doctors Care Model School </h2>
+    <div className="">
+      {/* Section 1: Background Image Section */}
+      <div className="relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image src={image2} alt="Background" fill className="" priority />
+        </div>
+        {/* Overlay Content */}
+        <div className="bg-black bg-opacity-10 py-16">
+          <div className="py-12  text-gray-400">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+              {/* Company Info */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">Texifin</h3>
+                <p className="mb-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div className="flex space-x-4">
+                  <Link
+                    href="#"
+                    className="p-1 rounded-full border border-gray-500"
+                  >
+                    <FacebookIcon
+                      sx={{
+                        color: "white",
+                        "&:hover": { color: "#1877F2" },
+                      }}
+                    />
                   </Link>
-                  <p className="mt-2 text-sm leading-6 text-gray-600">
-                    A School of Modern and Stardard Education System with Religious Value.
-                  </p>
+
+                  <Link
+                    href="#"
+                    className="p-1 rounded-full border border-gray-500"
+                  >
+                    <XIcon
+                      sx={{
+                        color: "white",
+                        "&:hover": { color: "gray" },
+                      }}
+                    />
+                  </Link>
+
+                  <Link
+                    href="#"
+                    className="p-1 rounded-full border border-gray-500"
+                  >
+                    <InstagramIcon
+                      sx={{
+                        color: "white",
+                        "&:hover": { color: "#E1306C" },
+                      }}
+                    />
+                  </Link>
+
+                  <Link
+                    href="#"
+                    className="p-1 rounded-full border border-gray-500"
+                  >
+                    <YouTubeIcon
+                      sx={{ color: "white", "&:hover": { color: "red" } }}
+                    />
+                  </Link>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <MapPinIcon className="h-5 w56 text-gray-600" />
-                  <p className="text-sm leading-6 text-gray-600">
-                    খিরাতলা, সিঙ্গারবিল, বিজয়নগর, ব্রাহ্মমবাড়িয়া.
-                  </p>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <DevicePhoneMobileIcon className="h-5 w-5 text-gray-600" />
-                  <p className="text-sm leading-6 text-gray-600">
-                    +1 (234) 567-8901
-                  </p>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <EnvelopeIcon className="h-5 w-5 text-gray-600" />
-                  <p className="text-sm leading-6 text-gray-600">
-                    support@gmail.com
-                  </p>
-                </div>
+              </div>
+              {/* Visit Us */}
+              <div>
+                <h4 className="text-xl font-semibold text-white mb-4">
+                  Visit Us
+                </h4>
+                <p>457 Morningview Lane, New York</p>
+                <p>07:00 AM - 18:00 PM</p>
+                <p>+1 (234) 567 890</p>
+                <p>example@mail.com</p>
+              </div>
+              {/* Explore Links */}
+              <div>
+                <h4 className="text-xl font-semibold text-white mb-4">
+                  Explore
+                </h4>
+                <ul className="flex flex-col space-y-2 ">
+                  <li>
+                    <Link href="/" className="text-gray-400 hover:text-white">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/about"
+                      className=" text-gray-400 hover:text-white"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services"
+                      className="text-gray-400 hover:text-white"
+                    >
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/projects"
+                      className="text-gray-400 hover:text-white"
+                    >
+                      Projects
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* Support Links */}
+              <div>
+                <h4 className="text-xl font-semibold text-white mb-4">
+                  Support
+                </h4>
+                <ul className="flex flex-col space-y-2">
+                  <li>
+                    <Link
+                      href="/help-center"
+                      className="text-gray-400 hover:text-white"
+                    >
+                      Help Center
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/career"
+                      className="text-gray-400 hover:text-white"
+                    >
+                      Career
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/privacy-policy"
+                      className="text-gray-400 hover:text-white"
+                    >
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/contact"
+                      className="text-gray-400 hover:text-white"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className=" font-semibold leading-6 text-gray-900">
-                    Resource
-                  </h3>
-                  <ul role="list" className="lg:mt-6 lg:space-y-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
-                    {navigation.solutions.map((item) => (
-                      <li key={item.name}>
-                        <Link
-                          href={item.href}
-                          className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-10 md:mt-0">
-                  <h3 className=" font-semibold leading-6 text-gray-900">
-                    Support
-                  </h3>
-                  <ul role="list" className="lg:mt-6 lg:space-y-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
-                    {navigation.support.map((item) => (
-                      <li key={item.name}>
-                        <Link
-                          href={item.href}
-                          className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+            {/* Copyright */}
+            <div className="mt-8  pt-6">
+              <div className="flex justify-between mx-auto max-w-7xl border-t border-gray-700">
+                <p>
+                  Copyright © 2024{" "}
+                  <span className="text-blue-400">NS International</span>. All
+                  Rights Reserved
+                </p>
+                <div className="flex items-center">
+                  <Link
+                    href="/privacy-policy"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Privacy Policy
+                  </Link>
+                  |
+                  <Link
+                    href="/terms"
+                    className="text-gray-400 hover:text-white "
+                  >
+                    Terms & Services
+                  </Link>
                 </div>
               </div>
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className=" font-semibold leading-6 text-gray-900">
-                    Result
-                  </h3>
-                  <ul role="list" className="lg:mt-6 lg:space-y-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
-                    {navigation.result.map((item) => (
-                      <li key={item.name}>
-                        <Link
-                          href={item.href}
-                          className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-10 md:mt-0 ">
-                  <h3 className="font-semibold leading-6 text-gray-900">
-                    Admission
-                  </h3>
-                  <ul role="list" className="lg:mt-6 lg:space-y-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
-                    {navigation.admission.map((item) => (
-                      <li key={item.name}>
-                        <Link
-                          href={item.href}
-                          className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="md:flex lg:flex justify-center content-center md:justify-between lg:justify-between border-t border-gray-900/10 pt-2">
-            <div className="md:flex lg:flex md:gap-3 lg:gap-4 justify-center items-center content-center">
-              <span className="mb-2 lg:mb-0">&copy; {new Date().getFullYear()} SoftEdu. All rights reserved.</span>
-              <div className="flex flex-col md:flex-row lg:flex-row items-center justify-center content-center text-center gap-1 md:gap-2 lg:gap-4">
-                <Link href="#" >
-                  <span>Privacy policy</span>
-                </Link>
-                <Link href="#" >
-                  <span>Terms of service</span>
-                </Link>
-              </div>
-            </div>
-            <div className="flex justify-center pt-4 md:pt-0 lg:pt-0 space-x-4  lg:col-end-13">
-              <Link rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-5 h-5 fill-current">
-                  <path d="M32 16c0-8.839-7.167-16-16-16-8.839 0-16 7.161-16 16 0 7.984 5.849 14.604 13.5 15.803v-11.177h-4.063v-4.625h4.063v-3.527c0-4.009 2.385-6.223 6.041-6.223 1.751 0 3.584 0.312 3.584 0.312v3.937h-2.021c-1.984 0-2.604 1.235-2.604 2.5v3h4.437l-0.713 4.625h-3.724v11.177c7.645-1.199 13.5-7.819 13.5-15.803z"></path>
-                </svg>
-              </Link>
-              <Link rel="noopener noreferrer" href="#" title="Twitter" className="flex items-center p-1">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current">
-                  <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
-                </svg>
-              </Link>
-              <Link rel="noopener noreferrer" href="#" title="Instagram" className="flex items-center p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5 fill-current">
-                  <path d="M16 0c-4.349 0-4.891 0.021-6.593 0.093-1.709 0.084-2.865 0.349-3.885 0.745-1.052 0.412-1.948 0.959-2.833 1.849-0.891 0.885-1.443 1.781-1.849 2.833-0.396 1.020-0.661 2.176-0.745 3.885-0.077 1.703-0.093 2.244-0.093 6.593s0.021 4.891 0.093 6.593c0.084 1.704 0.349 2.865 0.745 3.885 0.412 1.052 0.959 1.948 1.849 2.833 0.885 0.891 1.781 1.443 2.833 1.849 1.020 0.391 2.181 0.661 3.885 0.745 1.703 0.077 2.244 0.093 6.593 0.093s4.891-0.021 6.593-0.093c1.704-0.084 2.865-0.355 3.885-0.745 1.052-0.412 1.948-0.959 2.833-1.849 0.891-0.885 1.443-1.776 1.849-2.833 0.391-1.020 0.661-2.181 0.745-3.885 0.077-1.703 0.093-2.244 0.093-6.593s-0.021-4.891-0.093-6.593c-0.084-1.704-0.355-2.871-0.745-3.885-0.412-1.052-0.959-1.948-1.849-2.833-0.885-0.891-1.776-1.443-2.833-1.849-1.020-0.396-2.181-0.661-3.885-0.745-1.703-0.077-2.244-0.093-6.593-0.093zM16 2.88c4.271 0 4.781 0.021 6.469 0.093 1.557 0.073 2.405 0.333 2.968 0.553 0.751 0.291 1.276 0.635 1.844 1.197 0.557 0.557 0.901 1.088 1.192 1.839 0.22 0.563 0.48 1.411 0.553 2.968 0.072 1.688 0.093 2.199 0.093 6.469s-0.021 4.781-0.099 6.469c-0.084 1.557-0.344 2.405-0.563 2.968-0.303 0.751-0.641 1.276-1.199 1.844-0.563 0.557-1.099 0.901-1.844 1.192-0.556 0.22-1.416 0.48-2.979 0.553-1.697 0.072-2.197 0.093-6.479 0.093s-4.781-0.021-6.48-0.099c-1.557-0.084-2.416-0.344-2.979-0.563-0.76-0.303-1.281-0.641-1.839-1.199-0.563-0.563-0.921-1.099-1.197-1.844-0.224-0.556-0.48-1.416-0.563-2.979-0.057-1.677-0.084-2.197-0.084-6.459 0-4.26 0.027-4.781 0.084-6.479 0.083-1.563 0.339-2.421 0.563-2.979 0.276-0.761 0.635-1.281 1.197-1.844 0.557-0.557 1.079-0.917 1.839-1.199 0.563-0.219 1.401-0.479 2.964-0.557 1.697-0.061 2.197-0.083 6.473-0.083zM16 7.787c-4.541 0-8.213 3.677-8.213 8.213 0 4.541 3.677 8.213 8.213 8.213 4.541 0 8.213-3.677 8.213-8.213 0-4.541-3.677-8.213-8.213-8.213zM16 21.333c-2.948 0-5.333-2.385-5.333-5.333s2.385-5.333 5.333-5.333c2.948 0 5.333 2.385 5.333 5.333s-2.385 5.333-5.333 5.333zM26.464 7.459c0 1.063-0.865 1.921-1.923 1.921-1.063 0-1.921-0.859-1.921-1.921 0-1.057 0.864-1.917 1.921-1.917s1.923 0.86 1.923 1.917z"></path>
-                </svg>
-              </Link>
             </div>
           </div>
         </div>
-      </Container>
-    </footer>
+      </div>
+    </div>
   );
 };
 

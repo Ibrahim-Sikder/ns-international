@@ -19,7 +19,7 @@ type TStateProps = {
   size?: 'small' | 'medium';
 };
 
-const DCSAutoComplete = ({
+const NSAutoComplete = ({
   name,
   label = "Movie",
   fullWidth,
@@ -68,4 +68,4 @@ const DCSAutoComplete = ({
   );
 };
 
-export default DCSAutoComplete;
+export default NSAutoComplete;

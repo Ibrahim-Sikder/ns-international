@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import * as React from 'react';
-import { SxProps } from '@mui/system';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
-import { Controller, useFormContext } from 'react-hook-form';
+import * as React from "react";
+import { SxProps } from "@mui/system";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
+import { Controller, useFormContext } from "react-hook-form";
 type TTextareaProps = {
   name: string;
   placeholder?: string;
@@ -10,10 +10,10 @@ type TTextareaProps = {
   sx?: SxProps;
   required?: boolean;
 };
-const DCSTextArea = ({
+const NSTextField = ({
   name,
   placeholder,
-  minRows = 4, 
+  minRows = 4,
   sx,
   required,
 }: TTextareaProps) => {
@@ -29,15 +29,15 @@ const DCSTextArea = ({
           placeholder={placeholder}
           minRows={minRows}
           style={{
-            width: '100%',
-            maxHeight: 'auto',
-            border:'1px solid gray',
-            borderRadius: '4px',
-            ...(sx as React.CSSProperties)
+            width: "100%",
+            maxHeight: "auto",
+            border: "1px solid gray",
+            borderRadius: "4px",
+            ...(sx as React.CSSProperties),
           }}
         />
       )}
     />
   );
 };
-export default DCSTextArea;
+export default NSTextField;

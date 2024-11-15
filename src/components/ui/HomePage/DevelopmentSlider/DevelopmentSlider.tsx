@@ -12,8 +12,15 @@ import img2 from "../../../../../public/assets/developmentslider/2.jpg";
 import img3 from "../../../../../public/assets/developmentslider/3.jpg";
 import img4 from "../../../../../public/assets/developmentslider/4.jpg";
 import img5 from "../../../../../public/assets/developmentslider/5.jpg";
+import img6 from "../../../../../public/assets/developmentslider/1.jpg";
+import img7 from "../../../../../public/assets/developmentslider/2.jpg";
+import img8 from "../../../../../public/assets/developmentslider/3.jpg";
+import img9 from "../../../../../public/assets/developmentslider/4.jpg";
+import img10 from "../../../../../public/assets/developmentslider/5.jpg";
+import img11 from "../../../../../public/assets/developmentslider/4.jpg";
+import img12 from "../../../../../public/assets/developmentslider/5.jpg";
 import Link from "next/link";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
 const DevelopmentSlider = () => {
@@ -23,6 +30,13 @@ const DevelopmentSlider = () => {
     { image: img3, title: "Fabric Sourcing", link: "/fabric-sourcing" },
     { image: img4, title: "Production", link: "/production" },
     { image: img5, title: "QA And QC", link: "/qa-qc" },
+    { image: img6, title: "Sample Development", link: "/sample-development" },
+    { image: img7, title: "Merchandising", link: "/merchandising" },
+    { image: img8, title: "Fabric Sourcing", link: "/fabric-sourcing" },
+    { image: img9, title: "Production", link: "/production" },
+    { image: img10, title: "QA And QC", link: "/qa-qc" },
+    { image: img11, title: "Production", link: "/production" },
+    { image: img12, title: "QA And QC", link: "/qa-qc" },
   ];
 
   return (
@@ -47,7 +61,7 @@ const DevelopmentSlider = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -96,15 +110,6 @@ const DevelopmentSlider = () => {
         ))}
       </Swiper>
 
-      {/* Navigation Arrows */}
-      <div className="absolute bottom-4 left-4 flex space-x-2 z-10">
-        <div className="swiper-button-prev bg-gray-800 text-white p-3 cursor-pointer hover:bg-gray-700">
-          <FaChevronLeft />
-        </div>
-        <div className="swiper-button-next bg-gray-800 text-white p-3 cursor-pointer hover:bg-gray-700">
-          <FaChevronRight />
-        </div>
-      </div>
     </div>
   );
 };

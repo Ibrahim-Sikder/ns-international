@@ -1,0 +1,39 @@
+@media only screen and (max-width:1040px){
+    .map{
+      width:100% !important;
+    }
+  }    
+@media only screen and (max-width:768px){
+    .map{
+      width:100% !important;
+    }
+  }    
+@media only screen and (max-width:500px){
+    .map{
+      width:408px !important;
+    }
+  }    
+@media only screen and (max-width:425px){
+    .map{
+      width:360px !important;
+    }
+  }    
+  @media only screen and (max-width:375px){
+    .map{
+      width:350px !important;
+    }
+  }    
+  @media only screen and (max-width:320px){
+    .map{
+      width:304px !important;
+    }
+  }    
+  
+  @media only screen and (max-width:275px){
+    .map{
+        width:235px !important;
+    }
+    .smallImg{
+        display: none !important;
+    }
+}     

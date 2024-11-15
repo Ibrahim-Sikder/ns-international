@@ -10,8 +10,8 @@ import Image from "next/image";
 import logo from "../../../../public/assets/logo/nsinternational.png";
 // import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 // import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
-import location from "../../../../public/assets/icon/placeholder.png";
-import chat from "../../../../public/assets/icon/chat.png";
+import location from "../../../../public/assets/icon/location23.png";
+import chat from "../../../../public/assets/icon/chat1.png";
 
 const Header = () => {
   const [isClick, setIsClick] = useState(false);
@@ -21,7 +21,7 @@ const Header = () => {
 
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/super-admin/about", label: "About Us" },
+    { href: "/about", label: "About Us" },
     {
       label: "Service",
       submenu: [
@@ -39,15 +39,15 @@ const Header = () => {
         { href: "/", label: "Trimming & Accessories" },
       ],
     },
-    { href: "/complain", label: "Compliance & Ethics" },
+    { href: "/compliance", label: "Compliance & Ethics" },
     {
       label: "Products",
-      href: "/super-admin/products",
+      href: "/products",
       submenu: [
-        { href: "/super-admin/products/woven", label: "Woven" },
-        { href: "/super-admin/products/knit", label: "Knit" },
-        { href: "/super-admin/products/sweater", label: "Sweater" },
-        { href: "/super-admin/products/homewear", label: "Homewear & Others" },
+        { href: "/products/woven", label: "Woven" },
+        { href: "/products/knit", label: "Knit" },
+        { href: "/products/sweater", label: "Sweater" },
+        { href: "/products/homewear", label: "Homewear & Others" },
       ],
     },
     { href: "/contact", label: "Contact Us" },
@@ -88,16 +88,8 @@ const Header = () => {
           {/* <h1>Header</h1> */}
           <div className="lg:flex hidden">{navMenu}</div>
           <div className="flex gap-6">
-            <Image
-              src={location}
-              className="h-[50px] w-[50px]"
-              alt="location Icon"
-            />
-            <Image
-              src={chat}
-              className="h-[50px] w-[50px]"
-              alt="location Icon"
-            />
+          <Image src={location} className="h-[40px] w-[30px] " alt="location Icon" />
+          <Image src={chat} className="h-[40px] w-[40px]" alt="location Icon" />
             {/* <LocationOnOutlinedIcon sx={{ height: "40px", width: "40px" }} />
 
             <ForumOutlinedIcon sx={{ height: "40px", width: "40px" }} /> */}

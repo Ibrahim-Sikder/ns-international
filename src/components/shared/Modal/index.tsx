@@ -24,7 +24,7 @@ type TModalProps = {
   sx?: SxProps;
 };
 
-export default function DCSModal
+export default function NSModal
 ({
   open = false,
   setOpen,

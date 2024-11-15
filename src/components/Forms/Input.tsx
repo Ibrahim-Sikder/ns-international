@@ -21,7 +21,7 @@ type TInputProps = {
   
 };
 
-const DCSInput = ({
+const NSInput = ({
   name,
   label,
   size = "small",
@@ -74,4 +74,4 @@ const DCSInput = ({
   );
 };
 
-export default DCSInput;
+export default NSInput;
