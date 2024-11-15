@@ -1,7 +1,7 @@
-import img1 from "../../../../../public/assets/products/woven.jpg";
-import img2 from "../../../../../public/assets/products/knit.jpg";
-import img3 from "../../../../../public/assets/products/sweater.jpg";
-import img4 from "../../../../../public/assets/products/homewear.jpg";
+import img1 from "../../../../public/assets/products/woven.jpg";
+import img2 from "../../../../public/assets/products/knit.jpg";
+import img3 from "../../../../public/assets/products/sweater.jpg";
+import img4 from "../../../../public/assets/products/homewear.jpg";
 
 import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
@@ -14,25 +14,25 @@ const products = [
     category: "Woven",
     image: img1,
     icon: GoArrowUpRight,
-    link: "/super-admin/products/woven",
+    link: "/products/woven",
   },
   {
     category: "Knit",
     image: img2,
     icon: GoArrowUpRight,
-    link: "/super-admin/products/knit",
+    link: "/products/knit",
   },
   {
     category: "Sweater",
     image: img3,
     icon: GoArrowUpRight,
-    link: "/super-admin/products/sweater",
+    link: "/products/sweater",
   },
   {
     category: "Homewear",
     image: img4,
     icon: GoArrowUpRight,
-    link: "/super-admin/products/homewear",
+    link: "/products/homewear",
   },
 ];
 

@@ -21,7 +21,7 @@ const Header = () => {
 
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/super-admin/about", label: "About Us" },
+    { href: "/about", label: "About Us" },
     {
       label: "Service",
       submenu: [
@@ -42,15 +42,15 @@ const Header = () => {
     { href: "/complain", label: "Compliance & Ethics" },
     {
       label: "Products",
-      href: "/super-admin/products",
+      href: "/products",
       submenu: [
-        { href: "/super-admin/products/woven", label: "Woven" },
-        { href: "/super-admin/products/knit", label: "Knit" },
-        { href: "/super-admin/products/sweater", label: "Sweater" },
-        { href: "/super-admin/products/homewear", label: "Homewear & Others" },
+        { href: "/products/woven", label: "Woven" },
+        { href: "/products/knit", label: "Knit" },
+        { href: "/products/sweater", label: "Sweater" },
+        { href: "/products/homewear", label: "Homewear & Others" },
       ],
     },
-    { href: "/super-admin/contact", label: "Contact Us" },
+    { href: "/contact", label: "Contact Us" },
   ];
 
   const navMenu = (

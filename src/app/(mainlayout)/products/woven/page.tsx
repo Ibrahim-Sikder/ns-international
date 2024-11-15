@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
-import img1 from "../../../../../../public/assets/products/product (1).jpg";
-import img2 from "../../../../../../public/assets/products/product (2).jpg";
-import img3 from "../../../../../../public/assets/products/product (3).jpg";
-import img4 from "../../../../../../public/assets/products/product (4).jpg";
-import img5 from "../../../../../../public/assets/products/product (5).jpg";
-import img6 from "../../../../../../public/assets/products/product (6).jpg";
-import img7 from "../../../../../../public/assets/products/product (7).jpg";
-import img8 from "../../../../../../public/assets/products/product (8).jpg";
+import img1 from "../../../../../public/assets/products/product (1).jpg";
+import img2 from "../../../../../public/assets/products/product (2).jpg";
+import img3 from "../../../../../public/assets/products/product (3).jpg";
+import img4 from "../../../../../public/assets/products/product (4).jpg";
+import img5 from "../../../../../public/assets/products/product (5).jpg";
+import img6 from "../../../../../public/assets/products/product (6).jpg";
+import img7 from "../../../../../public/assets/products/product (7).jpg";
+import img8 from "../../../../../public/assets/products/product (8).jpg";
 
 import Image from "next/image";
 import Container from "@/components/ui/Container/Container";
