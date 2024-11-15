@@ -3,7 +3,7 @@ import Image from "next/image";
 import { SlEnergy } from "react-icons/sl";
 import { GiSprint } from "react-icons/gi";
 import { FaHandHoldingHeart, FaRegFlag } from "react-icons/fa";
-import mapImage from "../../../../../../public/assets/about/map.jpg";
+import mapImage from "../../../../../public/assets/about/map.jpg";
 
 const cardData = [
   {

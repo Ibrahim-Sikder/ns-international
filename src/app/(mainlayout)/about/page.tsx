@@ -1,8 +1,9 @@
 import React from "react";
 import Container from "@/components/ui/Container/Container";
-import img1 from "../../../../../public/assets/about/about-1.jpg";
-import img2 from "../../../../../public/assets/about/about-2.jpg";
-import img3 from "../../../../../public/assets/about/about-3.jpg";
+import img1 from "../../../../public/assets/about/about-1.jpg";
+import img2 from "../../../../public/assets/about/about-2.jpg";
+import img3 from "../../../../public/assets/about/about-3.jpg";
+
 import Image from "next/image";
 import Mission from "./_components/Mission";
 
