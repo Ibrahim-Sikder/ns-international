@@ -26,7 +26,7 @@ type TProps = {
   sx?: SxProps;
 };
 
-export default function DCSFileUploader({ name, label, sx }: TProps) {
+export default function NSFileUploader({ name, label, sx }: TProps) {
   const { control } = useFormContext();
   return (
     <Controller

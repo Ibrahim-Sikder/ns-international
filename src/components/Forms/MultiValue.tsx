@@ -18,7 +18,7 @@ type TAutocompleteProps = {
     defaultValue?: { title: string }[];
 };
 
-export const DCSMultiValue = ({
+export const NSMultiValue = ({
     name,
     label,
     options,
