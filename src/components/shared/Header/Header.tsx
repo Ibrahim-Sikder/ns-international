@@ -42,14 +42,15 @@ const Header = () => {
     { href: "/complain", label: "Compliance & Ethics" },
     {
       label: "Products",
+      href: "/products",
       submenu: [
-        { href: "/", label: "Woven" },
-        { href: "/", label: "Knit" },
-        { href: "/", label: "Sweater" },
-        { href: "/", label: "Homewear & Others" },
+        { href: "/products/woven", label: "Woven" },
+        { href: "/products/knit", label: "Knit" },
+        { href: "/products/sweater", label: "Sweater" },
+        { href: "/products/homewear", label: "Homewear & Others" },
       ],
     },
-    { href: "/super-admin/contact", label: "Contact Us" },
+    { href: "/contact", label: "Contact Us" },
   ];
 
   const navMenu = (
@@ -92,7 +93,6 @@ const Header = () => {
             {/* <LocationOnOutlinedIcon sx={{ height: "40px", width: "40px" }} />
 
             <ForumOutlinedIcon sx={{ height: "40px", width: "40px" }} /> */}
-
           </div>
           {/* <Link href="/login">
             <h5 className="hidden lg:flex gap-2 items-center">
