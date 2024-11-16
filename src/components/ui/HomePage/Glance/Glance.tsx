@@ -19,7 +19,7 @@ const Glance = () => {
           <div className="space-y-3">
             <h4 className="text-lg uppercase font-semibold">At a Glance</h4>
             <h1 className="text-4xl font-bold">
-              <span className="text-orange-400">Warptex</span> Is Operating In
+              <span className="text-orange-400">NS-International</span> Is Operating In
               Apparel Industries
             </h1>
           </div>
