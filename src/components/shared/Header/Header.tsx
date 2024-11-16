@@ -39,7 +39,7 @@ const Header = () => {
         { href: "/", label: "Trimming & Accessories" },
       ],
     },
-    { href: "/complain", label: "Compliance & Ethics" },
+    { href: "/compliance", label: "Compliance & Ethics" },
     {
       label: "Products",
       href: "/products",
