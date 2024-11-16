@@ -9,7 +9,7 @@ const Vision = () => {
       <Container className="my-20">
         <div className="bg-gray-100">
           {/* Header */}
-          <div className="flex justify-center bg-blue-800 py-4">
+          <div className="flex justify-center bg-blue-700 py-4">
             <h2 className="text-white text-2xl font-semibold">
               Compliance Vision
             </h2>

@@ -19,10 +19,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Container from "@/components/ui/Container/Container";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import Banner from "@/components/shared/Banner/Banner";
-
 
 const Page = () => {
   const handleSubmit = () => {
@@ -30,7 +29,7 @@ const Page = () => {
   };
   return (
     <>
-    <Banner title="Contact Us"/>
+      <Banner title="Contact Us" />
       <Container>
         <div className="items-center justify-center content-center  mx-2 md:mx-0 lg:mx-auto my-10">
           {/* top part */}
@@ -110,9 +109,7 @@ const Page = () => {
                       }}
                     />
                   </div>
-                  <h3 className="">
-                    123 Street Name, City
-                  </h3>
+                  <h3 className="">123 Street Name, City</h3>
                   <p className="mt-2">Visit us at our office location.</p>
                 </div>
               </div>
@@ -194,7 +191,7 @@ const Page = () => {
                 <div className="flex gap-8 space-y-2">
                   <div className="space-y-10">
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-blue-800 text-white rounded-full">
+                      <div className="p-4 bg-blue-700 text-white rounded-full">
                         <LocationCityIcon />
                       </div>
                       <div>
@@ -205,7 +202,7 @@ const Page = () => {
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-blue-800 text-white rounded-full">
+                      <div className="p-4 bg-blue-700 text-white rounded-full">
                         <LocalPhoneIcon />
                       </div>
                       <div>
@@ -219,7 +216,7 @@ const Page = () => {
 
                   <div className="space-y-10">
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-blue-800 text-white rounded-full">
+                      <div className="p-4 bg-blue-700 text-white rounded-full">
                         <ApartmentIcon />
                       </div>
                       <div>
@@ -231,7 +228,7 @@ const Page = () => {
                     </div>
 
                     <div className="flex items-center space-x-4 mt-[10px]">
-                      <div className="p-4 bg-blue-800 text-white rounded-full">
+                      <div className="p-4 bg-blue-700 text-white rounded-full">
                         <EmailIcon />
                       </div>
                       <div>

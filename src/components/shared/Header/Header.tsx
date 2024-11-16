@@ -8,8 +8,6 @@ import { GrClose } from "react-icons/gr";
 import "./Header.css";
 import Image from "next/image";
 import logo from "../../../../public/assets/logo/nsinternational.png";
-// import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-// import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
 import location from "../../../../public/assets/icon/location23.png";
 import chat from "../../../../public/assets/icon/chat1.png";
 
@@ -23,20 +21,21 @@ const Header = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     {
-      label: "Service",
+      href: "/services",
+      label: "Services",
       submenu: [
-        { href: "/", label: "Research & Development" },
-        { href: "/", label: "Sample Development" },
-        { href: "/", label: "Merchandising" },
-        { href: "/", label: "Fabric Sourcing" },
-        { href: "/", label: "Production" },
-        { href: "/", label: "QA and QC" },
-        { href: "/", label: "Delivery and Shipment" },
-        { href: "/", label: "Knitting" },
-        { href: "/", label: "Embroidery" },
-        { href: "/", label: "Garment Dyeing & Wash" },
-        { href: "/", label: "Printing" },
-        { href: "/", label: "Trimming & Accessories" },
+        { href: "/services/research", label: "Research & Development" },
+        { href: "/services/development", label: "Sample Development" },
+        { href: "/services/merchandising", label: "Merchandising" },
+        { href: "/services/fab-sourcing", label: "Fabric Sourcing" },
+        { href: "/services/production", label: "Production" },
+        { href: "/services/qa-qc", label: "QA and QC" },
+        { href: "/services/delivery", label: "Delivery and Shipment" },
+        { href: "/services/knitting", label: "Knitting" },
+        { href: "/services/embroidery", label: "Embroidery" },
+        { href: "/services/dyeing-wash", label: "Garment Dyeing & Wash" },
+        { href: "/services/printing", label: "Printing" },
+        { href: "/services/trimming", label: "Trimming & Accessories" },
       ],
     },
     { href: "/compliance", label: "Compliance & Ethics" },
@@ -85,20 +84,19 @@ const Header = () => {
       <div className=" h-10 lg:h-20 z-10 pb-1 w-full bg-gray-100">
         <div className="w-full  lg:h-20 mx-auto items-center justify-between lg:flex gap-20 px-24">
           <Image src={logo} className="h-16 w-28" alt="logo" />
-          {/* <h1>Header</h1> */}
           <div className="lg:flex hidden">{navMenu}</div>
           <div className="flex gap-6">
-          <Image src={location} className="h-[40px] w-[30px] " alt="location Icon" />
-          <Image src={chat} className="h-[40px] w-[40px]" alt="location Icon" />
-            {/* <LocationOnOutlinedIcon sx={{ height: "40px", width: "40px" }} />
-
-            <ForumOutlinedIcon sx={{ height: "40px", width: "40px" }} /> */}
+            <Image
+              src={location}
+              className="h-[40px] w-[30px] "
+              alt="location Icon"
+            />
+            <Image
+              src={chat}
+              className="h-[40px] w-[40px]"
+              alt="location Icon"
+            />
           </div>
-          {/* <Link href="/login">
-            <h5 className="hidden lg:flex gap-2 items-center">
-              Log In <FaArrowRightLong />
-            </h5>
-          </Link> */}
           <div className="lg:hidden px-2">
             <button className="p-1" onClick={toggleNavbar}>
               {isClick ? <GrClose size={20} /> : <GiHamburgerMenu size={20} />}
@@ -108,13 +106,6 @@ const Header = () => {
         {isClick && (
           <div className="lg:hidden absolute left-0 w-full bg-white z-50 shadow-md pb-1">
             {navMenu}
-            {/* <div className="flex justify-center p-2">
-              <Link href="/login">
-                <p className="flex gap-2 items-center">
-                  Log In <FaArrowRightLong />
-                </p>
-              </Link>
-            </div> */}
           </div>
         )}
       </div>

@@ -8,12 +8,12 @@ const Conduct = () => {
   return (
     <>
       <Container className="my-20">
-        <h2 className="bg-blue-800 py-4 text-center text-white text-2xl font-semibold">
+        <h2 className="bg-blue-700 py-4 text-center text-white text-2xl font-semibold">
           Code Of Conduct
         </h2>
         <div className="bg-gray-100 lg:p-10 p-5">
           <div>
-            <h3>Warptex Code of Conduct for Manufacturing Unit</h3>
+            <h3>NS International Code of Conduct for Manufacturing Unit</h3>
             <p className="text-justify mt-5">
               Our code is derived from the values and standards set by our
               customers. More particularly the Declaration of Human Rights and

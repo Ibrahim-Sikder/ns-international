@@ -35,7 +35,7 @@ const Mission = () => {
   return (
     <div className="my-20">
       {/* Title */}
-      <h2 className="text-center text-5xl font-bold text-blue-800 mb-12">
+      <h2 className="text-center text-5xl font-bold text-blue-700 mb-12">
         Our Mission And Belief
       </h2>
 
@@ -50,7 +50,7 @@ const Mission = () => {
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="bg-blue-800 text-white p-5 flex items-center gap-5 transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-blue-700 text-white p-5 flex items-center gap-5 transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               {card.icon}
               <div>

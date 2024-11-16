@@ -12,7 +12,7 @@ const WhoWeAre = () => {
         {/* left side */}
         <div className="w-[500px] p-6 -mt-20 z-50 bg-white">
           <div className="flex-1 py-10">
-            <h4 className=" text-blue-800 mb-2">Who We Are</h4>
+            <h4 className=" text-blue-700 mb-2">Who We Are</h4>
             <h2 className=" text-gray-800 mb-2">
               The Leading Apparel Manufacturer and Exporter
             </h2>
@@ -39,7 +39,7 @@ const WhoWeAre = () => {
 
         {/* right side */}
         <div className="w-[500px] mt-16 ">
-          <h4 className=" text-blue-800 mb-2">NS International</h4>
+          <h4 className=" text-blue-700 mb-2">NS International</h4>
           <h3 className="font-semibold text-gray-800 mb-4">
             We are in apparel industries
           </h3>
@@ -69,7 +69,7 @@ const WhoWeAre = () => {
               <div className="bg-white p-4 border rounded-md border-gray-300 text-center shadow-md">
                 <div className="text-3xl text-blue-500 mb-2">⚙️</div>
                 <div className="text-xl font-bold text-gray-800 mb-1">
-                  <CountUp start={0} end={13} duration={2} />{" "}+
+                  <CountUp start={0} end={13} duration={2} /> +
                 </div>
                 <p className="text-gray-600">Years Of Experience</p>
               </div>
