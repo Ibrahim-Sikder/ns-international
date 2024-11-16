@@ -1,0 +1,1209 @@
+{
+	"info": {
+		"_postman_id": "c70076d2-5229-4e35-82e1-57ca6bb7dc95",
+		"name": "ns-international",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27838892",
+		"_collection_link": "https://warped-robot-331405.postman.co/workspace/ns-international~8495935c-a286-4538-9f3e-ed86c65c61f9/collection/27838892-c70076d2-5229-4e35-82e1-57ca6bb7dc95?action=share&source=collection_link&creator=27838892"
+	},
+	"item": [
+		{
+			"name": "services",
+			"item": [
+				{
+					"name": "create-service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Graphic Design\",\r\n    \"sub_title\": \"Creative design solutions\",\r\n    \"description\": \"We provide graphic design services that help convey your brand message through stunning visuals.\",\r\n    \"category\": \"Design\",\r\n    \"images\": [\r\n      \"https://example.com/images/graphic-design1.jpg\"\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/services",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/services",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/services/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"services",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update services",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/services/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"services",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update services Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/services/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"services",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "banner",
+			"item": [
+				{
+					"name": "create-banner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"images\": [\r\n    \"https://example.com/image1.jpg\",\r\n    \"https://example.com/image2.jpg\"\r\n  ],\r\n  \"title\": \"Summer Sale Banner\",\r\n  \"description\": \"Get up to 50% off on all summer products!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/banner",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/banner",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/banner/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"banner",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete banner",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/banner/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"banner",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update banner",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/banner/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"banner",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "create-brand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"_id\": \"62a8b2f9b55c3211d0b4f789\",\r\n  \"images\": [\r\n    \"https://example.com/brand1-logo.jpg\",\r\n    \"https://example.com/brand2-logo.jpg\"\r\n  ],\r\n  \"title\": \"Our Trusted Partners\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/brands",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/brands",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/brands/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete brand",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/brands/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update brand",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/brands/67289d296f2275f133e1f720",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands",
+								"67289d296f2275f133e1f720"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact",
+			"item": [
+				{
+					"name": "contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"_id\": \"62a8a9f9b55c3211d0b4a456\",\r\n  \"name\": \"Jane Smith\",\r\n  \"email\": \"jane.smith@example.com\",\r\n  \"company_name\": \"Example Corp\",\r\n  \"phone\": 1234567890,\r\n  \"subject\": \"Inquiry about services\",\r\n  \"message\": \"I would like to know more about your services and pricing.\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/contact",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get contact user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/contact",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete contact",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/contact/67231b26893e707a85438d76",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"contact",
+								"67231b26893e707a85438d76"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"_id\": \"62a8b2f9b55c3211d0b4c789\",\r\n  \"name\": \"Alex Johnson\",\r\n  \"email\": \"alex.johnson@example.com\",\r\n  \"company_name\": \"Innovate Solutions\",\r\n  \"phone\": 9876543210,\r\n  \"subject\": \"Product Inquiry\",\r\n  \"message\": \"I'm interested in learning more about your product offerings and pricing.\",\r\n  \"createdAt\": \"2024-11-15T09:00:00.000Z\",\r\n  \"updatedAt\": \"2024-11-15T09:30:00.000Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/contact",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "create-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": \"Sweater\",\r\n  \"title\":\"Swetaer\",\r\n  \"images\": [\r\n    \"https://example.com/images/headphone1.jpg\",\r\n    \"https://example.com/images/headphone2.jpg\",\r\n    \"https://example.com/images/headphone3.jpg\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/products",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all  products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/products",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/products/6728959a9d081038b5493fde",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"products",
+								"6728959a9d081038b5493fde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/products/6728959a9d081038b5493fde",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"products",
+								"6728959a9d081038b5493fde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/products/6728959a9d081038b5493fde",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"products",
+								"6728959a9d081038b5493fde"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "about",
+			"item": [
+				{
+					"name": "create about",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"We are a leading company in providing top-notch services to our clients worldwide. Our mission is to deliver excellence in every project.\",\r\n  \"images\": [\r\n    \"https://example.com/images/about-us1.jpg\",\r\n    \"https://example.com/images/about-us2.jpg\"\r\n  ],\r\n  \"meta_title\": \"About Us - Leading Company in Service Excellence\",\r\n  \"meta_description\": \"Learn more about our company, our mission, and the values that drive us to provide exceptional services.\",\r\n  \"meta_keywords\": [\"company\", \"services\", \"excellence\", \"about us\", \"mission\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/about",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"about"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all about",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/about",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"about"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single about",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/about/6728a9389066c81b78b2d386",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"about",
+								"6728a9389066c81b78b2d386"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete single about",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/about/6728a9389066c81b78b2d386",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"about",
+								"6728a9389066c81b78b2d386"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update single about",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/about/6728a9389066c81b78b2d386",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"about",
+								"6728a9389066c81b78b2d386"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mission",
+			"item": [
+				{
+					"name": "create mission",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"_id\": \"62a8b2f9b55c3211d0b4e456\",\r\n  \"description\": \"Our mission is to empower communities through innovative and sustainable solutions.\",\r\n  \"title\": \"Empowering Communities\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/mission",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"mission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all mission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/mission",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"mission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single mission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/mission/6728a9389066c81b78b2d386",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"mission",
+								"6728a9389066c81b78b2d386"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete single mission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/mission/6728a9389066c81b78b2d386",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"mission",
+								"6728a9389066c81b78b2d386"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update single mission",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/mission/6728a9389066c81b78b2d386",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"mission",
+								"6728a9389066c81b78b2d386"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "add review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"designation\": \"Software Engineer\",\r\n    \"description\": \"This service was outstanding. I highly recommend them for their professionalism and quality work.\",\r\n    \"images\": [\r\n      \"https://example.com/images/review1.jpg\",\r\n      \"https://example.com/images/review2.jpg\"\r\n    ]\r\n\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/review",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all review",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/review",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single review",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/review/6728ab865b2b2f1f99fdf737",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"review",
+								"6728ab865b2b2f1f99fdf737"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update review",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/review/6728ab865b2b2f1f99fdf737",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"review",
+								"6728ab865b2b2f1f99fdf737"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete review",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/review/6728ab865b2b2f1f99fdf737",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"review",
+								"6728ab865b2b2f1f99fdf737"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "whoweare",
+			"item": [
+				{
+					"name": "add whoweare",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"About Us\",\r\n  \"description\": \"We are a global leader with decades of experience in providing top-notch services and products.\",\r\n  \"images\": [\"about_us1.jpg\", \"about_us2.jpg\", \"about_us3.jpg\"],\r\n  \"client\": 150,\r\n  \"shipment\": 300,\r\n  \"experience\": 20,\r\n  \"visited_conference\": 25,\r\n  \"compliance_factories\": 50,\r\n  \"production\": 10000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/whoweare",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"whoweare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all whoweare",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/whoweare",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"whoweare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single whoweare",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/whoweare/6728ab865b2b2f1f99fdf737",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"whoweare",
+								"6728ab865b2b2f1f99fdf737"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update whoweare",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/whoweare/6728ab865b2b2f1f99fdf737",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"whoweare",
+								"6728ab865b2b2f1f99fdf737"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete whoweare",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/whoweare/6728ab865b2b2f1f99fdf737",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"whoweare",
+								"6728ab865b2b2f1f99fdf737"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "create brand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"images\": [\r\n    \"https://example.com/images/brand1.jpg\",\r\n    \"https://example.com/images/brand2.jpg\",\r\n    \"https://example.com/images/brand3.jpg\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/brands",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/brands",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single brands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/brands",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update brand",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/brands/6728b5acbcce112b413a3c07",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands",
+								"6728b5acbcce112b413a3c07"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete brands",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/brands/6728b5acbcce112b413a3c07",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"brands",
+								"6728b5acbcce112b413a3c07"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "compliance",
+			"item": [
+				{
+					"name": "create compliance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"images\": [\"image1.jpg\", \"image2.jpg\", \"image3.jpg\"],\r\n  \"description\": \"This is a description of the compliance policy.\",\r\n  \"socialCompilianceImages\": [\"social_image1.jpg\", \"social_image2.jpg\"],\r\n  \"social_compliance_title\": \"Social Compliance Title\",\r\n  \"social_compliance_description\": \"Details about social compliance initiatives.\",\r\n  \"EmployeesCocCovers\": [\"employee_cover1.jpg\", \"employee_cover2.jpg\"],\r\n  \"zeroToleranceImages\": [\"zero_tolerance1.jpg\", \"zero_tolerance2.jpg\"],\r\n  \"zeroTolerance_Title\": \"Zero Tolerance Policy\",\r\n  \"zeroTolerance_description\": \"Explanation of the zero tolerance policy.\",\r\n  \"codeOfConductImages\": [\"conduct_image1.jpg\", \"conduct_image2.jpg\"],\r\n  \"cod_of_conduct_title\": \"Code of Conduct Title\",\r\n  \"cod_of_conduct_short_description\": \"A brief overview of the code of conduct.\",\r\n  \"cod_of_conduct_description\": \"In-depth explanation of the code of conduct.\",\r\n  \"csr_description\": \"Details about the CSR initiatives.\",\r\n  \"csr_short_description\": \"A brief overview of CSR.\",\r\n  \"csr_title\": \"Corporate Social Responsibility\",\r\n  \"csrImages\": [\"csr_image1.jpg\", \"csr_image2.jpg\", \"csr_image3.jpg\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/compliance",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"compliance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all comliance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/compliance",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"compliance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single compliance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/compliance",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"compliance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update compliance",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/compliance/6728b5acbcce112b413a3c07",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"compliance",
+								"6728b5acbcce112b413a3c07"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete compliance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{nsitbd_url}}/compliance/6728b5acbcce112b413a3c07",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"compliance",
+								"6728b5acbcce112b413a3c07"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "create-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"_id\": \"62a8a9f9b55c3211d0b4a123\",\r\n  \"email\": \"user@gmail.com\",\r\n  \"name\": \"Ibrahim Sikder\",\r\n  \"password\": \"123456\",  \r\n  \"passwordChangeAt\": \"2024-11-15T08:30:00.000Z\",\r\n  \"needPasswordChange\": true,\r\n  \"role\": \"user\",\r\n  \"status\": \"active\",\r\n  \"isDeleted\": false,\r\n  \"createdAt\": \"2024-11-15T08:00:00.000Z\",\r\n  \"updatedAt\": \"2024-11-15T08:30:00.000Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/user/",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"name\": \"Ibrahim Sikder\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{nsitbd_url}}/auth/login",
+							"host": [
+								"{{nsitbd_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "nsitbd_url",
+			"value": "http://localhost:5000/api/v1",
+			"type": "string"
+		}
+	]
+}
