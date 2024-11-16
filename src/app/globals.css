@@ -23,29 +23,9 @@ html {
   font-style: normal;
 }
 
-/* 
-@font-face {
-  font-family: "SolaimanLipi";
-  src: url("/fonts/SolaimanLipi-Normal.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-} */
 
 .sectionMargin {
   margin-top: 100px;
 }
 
-@layer base {
-  h1 {
-    @apply text-4xl font-bold;
-  }
-  h2 {
-    @apply text-3xl md:text-2xl font-semibold;
-  }
-  h3 {
-    @apply text-2xl font-semibold;
-  }
-  h4 {
-    @apply text-xl font-semibold;
-  }
-}
+

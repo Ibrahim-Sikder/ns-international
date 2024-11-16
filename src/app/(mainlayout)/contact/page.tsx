@@ -19,10 +19,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Container from "@/components/ui/Container/Container";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import Banner from "@/components/shared/Banner/Banner";
-
 
 const Page = () => {
   const handleSubmit = () => {
@@ -30,7 +29,7 @@ const Page = () => {
   };
   return (
     <>
-    <Banner title="Contact Us"/>
+      <Banner title="Contact Us" />
       <Container>
         <div className="items-center justify-center content-center  mx-2 md:mx-0 lg:mx-auto my-10">
           {/* top part */}
@@ -110,9 +109,7 @@ const Page = () => {
                       }}
                     />
                   </div>
-                  <h3 className="">
-                    123 Street Name, City
-                  </h3>
+                  <h3 className="">123 Street Name, City</h3>
                   <p className="mt-2">Visit us at our office location.</p>
                 </div>
               </div>
@@ -120,8 +117,10 @@ const Page = () => {
           </div>
 
           {/* middle part */}
-          <div className="grid lg:max-w-screen-xl grid-cols-1 lg:gap-10 mx-auto md:grid-cols-2 px-1 md:px-8 lg:px-10 py-1 md:py-5 lg:py-5  text-gray-800  justify-center ">
+          <div className="lg:max-w-screen-xl grid grid-cols-1 md:grid-cols-2 lg:gap-10 mx-auto  px-1 md:px-8 lg:px-10 py-1 md:py-5 lg:py-5  text-gray-800  justify-center ">
             <div className="p-12 shadow-lg border">
+         
+
               <NSForm onSubmit={handleSubmit}>
                 <div className="space-y-8">
                   <div>
@@ -178,6 +177,8 @@ const Page = () => {
                 </div>
               </NSForm>
             </div>
+            
+
             <div className="lg:w-full">
               <div className="space-y-6 mt-10">
                 <div>
@@ -194,7 +195,7 @@ const Page = () => {
                 <div className="flex gap-8 space-y-2">
                   <div className="space-y-10">
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-blue-800 text-white rounded-full">
+                      <div className="p-4 bg-blue-700 text-white rounded-full">
                         <LocationCityIcon />
                       </div>
                       <div>
@@ -205,7 +206,7 @@ const Page = () => {
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-blue-800 text-white rounded-full">
+                      <div className="p-4 bg-blue-700 text-white rounded-full">
                         <LocalPhoneIcon />
                       </div>
                       <div>
@@ -219,7 +220,7 @@ const Page = () => {
 
                   <div className="space-y-10">
                     <div className="flex items-center space-x-4">
-                      <div className="p-4 bg-blue-800 text-white rounded-full">
+                      <div className="p-4 bg-blue-700 text-white rounded-full">
                         <ApartmentIcon />
                       </div>
                       <div>
@@ -231,7 +232,7 @@ const Page = () => {
                     </div>
 
                     <div className="flex items-center space-x-4 mt-[10px]">
-                      <div className="p-4 bg-blue-800 text-white rounded-full">
+                      <div className="p-4 bg-blue-700 text-white rounded-full">
                         <EmailIcon />
                       </div>
                       <div>
@@ -248,7 +249,7 @@ const Page = () => {
 
                 {/* Social Media  */}
                 <h3 className=" text-gray-800">Our Social Media</h3>
-                <div className="flex space-x-1 ">
+                <div className="flex flex-wrap justify-start gap-2 mt-4 space-x-1 ">
                   {/* fb */}
                   <Link href="https://facebook.com" className="">
                     <button className="p-2 bg-blue-600 text-white rounded-full">
@@ -287,18 +288,23 @@ const Page = () => {
               </div>
             </div>
           </div>
+
+
+
+         
+
+
         </div>
       </Container>
-      <div className="shadow-md rounded border">
+      <div className="shadow-md rounded border mt-8">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1075.1518268683578!2d90.42238324968673!3d23.820644750680454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c700ff992a63%3A0xbdcb1d9ae66b2d5c!2sSoftypi%20Technology!5e0!3m2!1sen!2sbd!4v1711790838610!5m2!1sen!2sbd"
-          className="map w-full h-[500px] "
+          className="w-full h-64 md:h-[500px] lg:h-[600px]"
           style={{ border: "0" }}
-          allowFullScreen=""
+  
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
+      </div>     
     </>
   );
 };
