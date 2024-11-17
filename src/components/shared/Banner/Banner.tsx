@@ -7,7 +7,7 @@ type BannerProps = {
 
 const Banner: React.FC<BannerProps> = ({ title }) => {
   return (
-    <div className="relative flex items-center justify-center h-64">
+    <div className="relative flex items-center justify-center h-28 lg:h-64">
       <Image
         src={bannerImage}
         alt="Banner Background"

@@ -205,18 +205,18 @@ const DevelopmentSlider = () => {
       <div className="relative w-full h-auto my-7" >
         
         <div className="text-center space-y-4 p-4">
-          <h4 className="text-blue-400 text-base">
+          <h5 className="text-blue-400 text-base">
             Development, Production & Delivery
-          </h4>
-          <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold">
-            NS International Ensure the Best Production From{" "}
-            <span className="text-blue-400">Every Angle</span>
+          </h5>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+            NS International Ensure the Best Production From
+            <span className="text-blue-400">{" "} Every Angle</span>
           </h2>
-          <h4 className="text-sm md:text-base text-gray-600">
+          <h5 className="text-sm md:text-base text-gray-500">
             NS International is the largest peer-to-peer comparison initiative
             in the textile industry. It tracks the apparel material and home
             textile sector’s progress.
-          </h4>
+          </h5>
         </div>
         <Swiper
           loop={true}
