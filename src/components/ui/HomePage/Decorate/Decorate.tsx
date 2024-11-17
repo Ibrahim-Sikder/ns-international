@@ -4,6 +4,7 @@ import image2 from "../../../../assets/images/decorate/bgimg.jpeg";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import CallIcon from '@mui/icons-material/Call';
+import Link from "next/link";
 
 const Decorate = () => {
   return (
@@ -40,13 +41,15 @@ const Decorate = () => {
                 <p className="text-gray-400">Lorem ipsum dolor sit amet.</p>
               </div>
               {/* Feature Box 2 */}
+              <Link href={"/faq"}>
               <div className="bg-gray-100 bg-opacity-25 p-6 text-white">
                 <div className="flex justify-center mb-4">
                   <QuestionAnswerIcon/>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">FAQs Page</h3>
+                <h3 className="text-xl font-semibold mb-2">FAQ</h3>
                 <p className="text-gray-400">Lorem ipsum dolor sit amet.</p>
               </div>
+              </Link>
               {/* Feature Box 3 */}
               <div className="bg-gray-100 bg-opacity-25 p-6 text-white">
                 <div className="flex justify-center mb-4">
