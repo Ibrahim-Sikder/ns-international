@@ -186,7 +186,7 @@ const Page = () => {
                     Contact Us
                   </h5>
                 </div>
-                <h2 className=" text-gray-800">Get In Touch</h2>
+                <h1 className=" text-gray-800">Get In Touch</h1>
                 <p className="text-lg text-gray-600">
                   We&apos;re always here to assist you with any questions or
                   support you need. Feel free to reach out to us through the

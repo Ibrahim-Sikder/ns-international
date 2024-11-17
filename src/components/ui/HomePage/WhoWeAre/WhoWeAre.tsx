@@ -17,7 +17,7 @@ const WhoWeAre = () => {
         {/* Left side */}
         <div className="w-full lg:w-[500px] p-6 bg-white z-10 -mt-20 ">
           <div className="py-10">
-            <h4 className="text-blue-900 mb-2">Who We Are</h4>
+            <h5 className="text-blue-900 mb-2">Who We Are</h5>
             <h2 className="text-gray-800 mb-2 text-xl sm:text-2xl lg:text-3xl">
               The Leading Apparel Manufacturer and Exporter
             </h2>
