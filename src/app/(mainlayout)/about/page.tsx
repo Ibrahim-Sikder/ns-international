@@ -1,31 +1,38 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Container from "@/components/ui/Container/Container";
-import img1 from "../../../../public/assets/about/about-1.jpg";
-import img2 from "../../../../public/assets/about/about-2.jpg";
-import img3 from "../../../../public/assets/about/about-3.jpg";
 
 import Image from "next/image";
 import Mission from "./_components/Mission";
 import Banner from "@/components/shared/Banner/Banner";
 
-const page = () => {
-  const sections = [
-    {
-      image: img1,
-      content:
-        "NS International is a Leading multinational apparel buying house, sourcing company, Manufacturer and committed exporter of Woven, denim, Knit, sweater etc. The company was incorporated in 2010 by The collaboration of two partners. We are committed to produce the best quality garments for all of our internationally reputed brands /importers and departmental chain stores from the US, RU and the EU markets. Since our establishment 13 years ago, we have developed long term trade relationships with most of our international customers & earned their trust in their respective markets. We are involved in manufacturing and sourcing of all kind of RMG items, namely Men’s, Ladies, boys, girls, kids, Unisex items such as Pants, shirts, dress, sweaters, Socks, pullover, cardigans, jumper, vests, t-shirt, polo shirt, hoodie, sweat-shirt, jogging suits, etc.",
-    },
-    {
-      image: img2,
-      content:
-        "NS International is a Leading multinational apparel buying house, sourcing company, Manufacturer and committed exporter of Woven, denim, Knit, sweater etc. The company was incorporated in 2010 by The collaboration of two partners. We are committed to produce the best quality garments for all of our internationally reputed brands /importers and departmental chain stores from the US, RU and the EU markets. Since our establishment 13 years ago, we have developed long term trade relationships with most of our international customers & earned their trust in their respective markets. We are involved in manufacturing and sourcing of all kind of RMG items, namely Men’s, Ladies, boys, girls, kids, Unisex items such as Pants, shirts, dress, sweaters, Socks, pullover, cardigans, jumper, vests, t-shirt, polo shirt, hoodie, sweat-shirt, jogging suits, etc.",
-    },
-    {
-      image: img3,
-      content:
-        "NS International is a Leading multinational apparel buying house, sourcing company, Manufacturer and committed exporter of Woven, denim, Knit, sweater etc. The company was incorporated in 2010 by The collaboration of two partners. We are committed to produce the best quality garments for all of our internationally reputed brands /importers and departmental chain stores from the US, RU and the EU markets. Since our establishment 13 years ago, we have developed long term trade relationships with most of our international customers & earned their trust in their respective markets. We are involved in manufacturing and sourcing of all kind of RMG items, namely Men’s, Ladies, boys, girls, kids, Unisex items such as Pants, shirts, dress, sweaters, Socks, pullover, cardigans, jumper, vests, t-shirt, polo shirt, hoodie, sweat-shirt, jogging suits, etc.",
-    },
-  ];
+interface About {
+  _id: string;
+  title: string;
+  description: string;
+  image: string;
+  images: string[];
+}
+
+interface AboutResponse {
+  success: boolean;
+  message: string;
+  data: {
+    abouts: About[];
+  };
+}
+
+const Page = () => {
+  const [data, setData] = useState<AboutResponse | null>(null);
+  console.log(data);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/v1/about")
+      .then((response) => response.json())
+      .then((data: AboutResponse) => setData(data))
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   return (
     <>
@@ -40,28 +47,44 @@ const page = () => {
           </h1>
         </div>
 
-        {sections.map((section, index) => (
+        {data?.data?.abouts?.map((about, index) => (
           <div
             key={index}
             className="grid grid-cols-1 md:grid-cols-2 items-center bg-gray-100"
           >
             {index % 2 === 0 ? (
               <>
-                <Image
-                  src={section.image}
-                  alt="Image"
-                  className="w-full border"
-                />
-                <p className="text-justify px-10">{section.content}</p>
+                {about.images.map((image, index) => (
+                  <div key={index}>
+                    <Image
+                      src={image}
+                      alt="About Image"
+                      width={400}
+                      height={400}
+                      className="w-full h-[400px]"
+                    />
+                  </div>
+                ))}
+                <p className="text-justify lg:px-10 px-5 lg:py-0 py-5">
+                  {about.description}
+                </p>
               </>
             ) : (
               <>
-                <p className="text-justify px-10">{section.content}</p>
-                <Image
-                  src={section.image}
-                  alt="Image"
-                  className="w-full border"
-                />
+                <p className="text-justify lg:px-10 px-5 lg:py-0 py-5">
+                  {about.description}
+                </p>
+                {about.images.map((image, index) => (
+                  <div key={index}>
+                    <Image
+                      src={image}
+                      alt="About Image"
+                      width={400}
+                      height={400}
+                      className="w-full h-[400px]"
+                    />
+                  </div>
+                ))}
               </>
             )}
           </div>
@@ -73,4 +96,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
