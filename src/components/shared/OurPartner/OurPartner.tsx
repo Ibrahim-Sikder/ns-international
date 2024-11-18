@@ -21,7 +21,7 @@ interface PartnerResponse {
 
 const OurPartner = () => {
   const [data, setData] = useState<PartnerResponse | null>(null);
-  console.log(data);
+  // console.log(data);
   useEffect(() => {
     fetch("http://localhost:5000/api/v1/brands")
       .then((response) => response.json())

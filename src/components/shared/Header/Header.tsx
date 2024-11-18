@@ -46,7 +46,7 @@ const Header = () => {
         { href: "/products/woven", label: "Woven" },
         { href: "/products/knit", label: "Knit" },
         { href: "/products/sweater", label: "Sweater" },
-        { href: "/products/homewear", label: "Homewear & Others" },
+        { href: "/products/Homeweare & Others", label: "Homewear & Others" },
       ],
     },
     { href: "/contact", label: "Contact Us" },
@@ -83,7 +83,11 @@ const Header = () => {
     <>
       <div className=" h-16 lg:h-20 z-10 py-1 w-full bg-gray-100">
         <div className="w-full  lg:h-20 items-center justify-between flex gap-20 px-5 lg:px-24 pt-[5px]">
-          <Image src={logo} className="h-auto lg:h-16 w-[70px] lg:w-28" alt="logo" />
+          <Image
+            src={logo}
+            className="h-auto lg:h-16 w-[70px] lg:w-28"
+            alt="logo"
+          />
           {/* <h1>Header</h1> */}
           <div className="lg:flex hidden">{navMenu}</div>
           <div className="flex gap-6">
