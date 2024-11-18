@@ -1,9 +1,47 @@
+"use client";
 import Image from "next/image";
-import img1 from "../../../../../public/assets/ethics/no-child-labor.jpg";
-import img2 from "../../../../../public/assets/ethics/harassment-and-abuse.jpg";
 import Container from "@/components/ui/Container/Container";
+import { useEffect, useState } from "react";
+
+interface Compliance {
+  description: string;
+  zeroTolerance_Title: string;
+  zeroTolerance_description: string;
+  zeroToleranceImages: string[];
+  EmployeesCocCovers: string[];
+}
+
+interface ApiResponse {
+  data: {
+    compliances: Compliance[];
+  };
+}
 
 const Policy = () => {
+  const [data, setData] = useState<ApiResponse | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/v1/compliance")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setError("Failed to fetch data.");
+      });
+  }, []);
+
+  if (error) {
+    return <div className="text-red-500 text-center">{error}</div>;
+  }
+
+  if (!data) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <>
       <Container className="my-20">
@@ -16,44 +54,36 @@ const Policy = () => {
           </div>
 
           {/* Social Compliance Section */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:p-10 p-5">
-            <div>
-              <h4 className="text-xl font-bold text-center mb-5">
-                Compliance issues to be categorized as ZTV
-              </h4>
-              <div className="bg-white">
-                <p className="p-5 border-b text-justify">Compliance Vision</p>
-                <p className="p-5 border-b text-justify">Forced labor</p>
-                <p className="p-5 border-b text-justify">Discrimination</p>
-                <p className="p-5 border-b text-justify">
-                  Harassment and Abuse
-                </p>
-                <p className="p-5 border-b text-justify">
-                  Unauthorized subcontracting including Tier 2 operations
-                  regardless of brands
-                </p>
-                <p className="p-5 border-b text-justify">
-                  Shared building unless approved by Head of Compliance (any
-                  other factory owned by different owner located in the same
-                  building) or factory located in building which has
-                  shops/markets
-                </p>
-                <p className="p-5 border-b text-justify">
-                  Factory building approved for residential purposes
-                </p>
-                <p className="p-5 border-b text-justify">
-                  Any unethical practice, such as bribery in the form of cash or
-                  kind to facilitate any process
-                </p>
+          {data?.data?.compliances?.map((section, index) => (
+            <div
+              key={index}
+              className="grid lg:grid-cols-2 items-center gap-8 lg:p-10 p-5"
+            >
+              <div>
+                <div className="space-y-4">
+                  <p className="bg-white p-4 shadow-md text-justify">
+                    {section.zeroTolerance_Title}
+                  </p>
+                  <p className="bg-white p-4 shadow-md text-justify">
+                    {section.zeroTolerance_description}
+                  </p>
+                </div>
+              </div>
+              <div>
+                {section?.zeroToleranceImages?.map((image, i) => (
+                  <div key={i}>
+                    <Image
+                      src={image}
+                      alt=""
+                      height={300}
+                      width={300}
+                      className="w-full h-full"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
-
-            {/* Images */}
-            <div className="space-y-5">
-              <Image src={img1} alt="Compliance Workforce" />
-              <Image src={img2} alt="Compliance Workforce" />
-            </div>
-          </div>
+          ))}
         </div>
       </Container>
     </>
