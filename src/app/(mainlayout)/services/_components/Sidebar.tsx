@@ -10,7 +10,7 @@ const Sidebar = () => {
     <div className="w-full lg:w-96 space-y-3">
       <Link
         href="/services/research"
-        className={`bg-gray-100 flex items-center justify-between px-4 py-4 ${
+        className={`bg-blue-400 flex items-center justify-between px-4 py-4 ${
           currentRoute === "/services/research" ? "bg-[#02ADFF] text-white" : ""
         }`}
       >
@@ -20,7 +20,7 @@ const Sidebar = () => {
 
       <Link
         href="/services/development"
-        className={`bg-gray-100 flex items-center justify-between px-4 py-3 ${
+        className={`bg-blue-400 flex items-center justify-between px-4 py-3 ${
           currentRoute === "/services/development"
             ? "bg-[#02ADFF] text-white"
             : ""

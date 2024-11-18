@@ -12,8 +12,17 @@ import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { FaRegLightbulb } from "react-icons/fa";
 import { MdOutlineDangerous } from "react-icons/md";
 import { IoMdTimer } from "react-icons/io";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ParallaxSec = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: false, 
+    });
+  }, []);
   return (
     <div className="">
       <div className="relative ">
@@ -37,14 +46,14 @@ const ParallaxSec = () => {
                 </h5>
                 <div className="lg:flex gap-10 lg:mx-10 justify-center items-center content-center">
                   <div className="bg-gray-500 bg-opacity-45 px-32 lg:p-5 lg:rounded-md lg:h-[500px] flex flex-col justify-center items-center mb-2 lg:mb-0">
-                    <div className="flex ">
-                      <div className="flex gap-1 lg:gap-2 border-r border-b p-2 lg:p-7 items-center">
+                    <div className="flex " data-aos="fade-down-right">
+                      <div className="flex gap-1 lg:gap-2 border-r border-b p-2 lg:p-7 items-center" >
                         <FaHandHoldingWater className="h-20 lg:h-7 w-14 lg:w-7 " />
                         <h4 className="text-sm md:text-xl">
                           Pure Drinking Water
                         </h4>
                       </div>
-                      <div className="flex gap-1 lg:gap-2 border-b p-2 lg:p-7 items-center">
+                      <div className="flex gap-1 lg:gap-2 border-b p-2 lg:p-7 items-center" >
                         <GiElectric className="h-20 lg:h-7 w-14 lg:w-7" />
                         <h4 className="text-sm md:text-xl">
                           Electric Shock Prevention
@@ -52,12 +61,12 @@ const ParallaxSec = () => {
                       </div>
                     </div>
 
-                    <div className="flex ">
-                      <div className="flex gap-1 lg:gap-2 border-r border-b p-2 lg:p-7 items-center">
+                    <div className="flex " data-aos="fade-down-right">
+                      <div className="flex gap-1 lg:gap-2 border-r border-b p-2 lg:p-7 items-center" >
                         <GiTakeMyMoney className="h-20 lg:h-7 w-14 lg:w-7" />
                         <h4 className="text-sm md:text-xl">Salary On-Time</h4>
                       </div>
-                      <div className="flex gap-1 lg:gap-2 border-b p-2 lg:p-7 items-center">
+                      <div className="flex gap-1 lg:gap-2 border-b p-2 lg:p-7 items-center" >
                         <FaHandsHoldingChild className="h-20 lg:h-7 w-14 lg:w-7" />
                         <h4 className="text-sm md:text-xl">
                           Maternity Leave
@@ -65,32 +74,32 @@ const ParallaxSec = () => {
                       </div>
                     </div>
 
-                    <div className="flex ">
-                      <div className="flex gap-1 lg:gap-2 border-r border-b p-2 lg:p-7 items-center">
+                    <div className="flex " data-aos="fade-down-right">
+                      <div className="flex gap-1 lg:gap-2 border-r border-b p-2 lg:p-7 items-center" >
                         <MdOutlineHealthAndSafety className="h-20 lg:h-7 w-14 lg:w-7" />
                         <h4 className="text-sm md:text-xl">
                           Health and Safety
                         </h4>
                       </div>
-                      <div className="flex gap-1 lg:gap-2 border-b p-2 lg:p-7 items-center">
+                      <div className="flex gap-1 lg:gap-2 border-b p-2 lg:p-7 items-center" >
                         <FaRegLightbulb className="h-20 lg:h-7 w-14 lg:w-7" />
                         <h4 className="text-sm md:text-xl">
                           Lighting and Ventilation
                         </h4>
                       </div>
                     </div>
-                    <div className="flex">
-                      <div className="flex gap-1 lg:gap-2 border-r border-b p-2 lg:p-7 items-center">
+                    <div className="flex" data-aos="fade-down-right">
+                      <div className="flex gap-1 lg:gap-2 border-r border-b p-2 lg:p-7 items-center" >
                         <MdOutlineDangerous className="h-20 lg:h-7 w-14 lg:w-7" />
                         <h4 className="text-sm md:text-xl">No Child Labor</h4>
                       </div>
-                      <div className="flex gap-1 lg:gap-2 border-b p-2 lg:p-7 items-center">
+                      <div className="flex gap-1 lg:gap-2 border-b p-2 lg:p-7 items-center" >
                         <IoMdTimer className="h-20 lg:h-7 w-14 lg:w-7" />
                         <h4 className="text-sm md:text-xl">Working hour</h4>
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div data-aos="flip-right">
                     <Image
                       src={sewing}
                       alt="img"

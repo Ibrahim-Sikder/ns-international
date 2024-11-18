@@ -66,6 +66,7 @@ const Slider = () => {
         navigation={true}
         pagination={{
           clickable: true,
+          
         }}
         autoplay={{
           delay: 3000,
@@ -74,6 +75,7 @@ const Slider = () => {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         className="mySwiper"
         onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
+        
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>

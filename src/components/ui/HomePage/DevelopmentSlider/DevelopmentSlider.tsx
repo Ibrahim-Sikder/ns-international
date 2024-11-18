@@ -175,6 +175,10 @@ import img9 from "../../../../../public/assets/developmentslider/4.jpg";
 import img10 from "../../../../../public/assets/developmentslider/5.jpg";
 import img11 from "../../../../../public/assets/developmentslider/4.jpg";
 import img12 from "../../../../../public/assets/developmentslider/5.jpg";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const DevelopmentSlider = () => {
   const slides = [
@@ -200,11 +204,19 @@ const DevelopmentSlider = () => {
     setIsOpen(true);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: false, 
+    });
+  }, []);
+
+
   return (
     <>
       <div className="relative w-full h-auto my-7" >
         
-        <div className="text-center space-y-4 p-4">
+        <div className="text-center space-y-4 p-4" data-aos="fade-right">
           <h5 className="text-blue-400 text-base">
             Development, Production & Delivery
           </h5>
@@ -238,6 +250,7 @@ const DevelopmentSlider = () => {
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
+          data-aos="fade-up-left"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>

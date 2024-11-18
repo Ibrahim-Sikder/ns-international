@@ -42,6 +42,7 @@ const OurPartner = () => {
             <div
               key={partner.id}
               className="mx-4 flex justify-center items-center"
+              data-aos="fade-up-left"
             >
               <Image
                 src={partner.logo}
