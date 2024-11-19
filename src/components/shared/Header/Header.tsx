@@ -64,7 +64,7 @@ const Header = () => {
         { href: "/products/woven", label: "Woven" },
         { href: "/products/knit", label: "Knit" },
         { href: "/products/sweater", label: "Sweater" },
-        { href: "/products/homewear", label: "Homewear & Others" },
+        { href: "/products/Homeweare & Others", label: "Homewear & Others" },
       ],
     },
     { href: "/contact", label: "Contact Us" },
