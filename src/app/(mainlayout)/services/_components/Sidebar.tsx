@@ -6,7 +6,6 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const Sidebar = () => {
   const currentRoute = usePathname();
-
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,28 +22,30 @@ const Sidebar = () => {
       });
   }, []);
 
-  console.log(data);
-
   if (loading) {
     return <div className="text-center py-20">Loading...</div>;
   }
 
   return (
     <div className="w-full lg:w-96 space-y-3">
-      {data.map((item: { _id: string; title: string }) => (
-        <Link
-          key={item?._id}
-          href={`/services/${item?.title}`}
-          className={`bg-gray-100 flex items-center justify-between px-4 py-3 ${
-            currentRoute === "/services/trimming"
-              ? "bg-[#02ADFF] text-white"
-              : ""
-          }`}
-        >
-          {item?.title}
-          <IoIosArrowForward />
-        </Link>
-      ))}
+      {data.map((item: { _id: string; title: string }) => {
+        // Dynamically generate the route according to the title
+        const itemRoute = `/services/${encodeURIComponent(item?.title)}`;
+        const isActive = currentRoute === itemRoute;
+
+        return (
+          <Link
+            key={item?._id}
+            href={itemRoute}
+            className={`bg-gray-100 flex items-center justify-between px-4 py-3 ${
+              isActive ? "bg-red-500 text-white" : ""
+            }`}
+          >
+            {item?.title}
+            <IoIosArrowForward />
+          </Link>
+        );
+      })}
     </div>
   );
 };

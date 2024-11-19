@@ -1,65 +1,63 @@
-
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 a {
-    text-decoration: none;
-    color: #333;
-    padding: 4px;
-    display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 4px;
+  display: block;
 }
 
-/* Styling for the hover effect */
 
-.submenu {    
-    position: absolute;
-    background-color: #f9f9f9;
-    display: flex;
-    width: 248px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    flex-direction: column;
-    z-index: 99999999;
-     visibility: hidden;
-    opacity: 0;
-    transform: translateY(0);
-    transition: all .5s ease;    
+
+.submenu {
+  position: absolute;
+  background-color: #f9f9f9;
+  display: flex;
+  width: 248px;
+  top: 48px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  flex-direction: column;
+  z-index: 99999999;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0);
+  transition: all 0.5s ease;
 }
 
 .submenu a {
-    color: #333333;
-    padding: 10px;  
+  color: #333333;
+  padding: 10px;
 }
 
 .submenu a:hover {
-    background-color: #c3ddff;
-    border-radius: 3px;    
+  background-color: #c3ddff;
+  border-radius: 3px;
 }
 
 li:hover .submenu {
-    visibility: visible;;
-    opacity: 1;
-    transform: translateY(1);
-    
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(1);
 }
 
-.mobileMenu{
-    position: absolute;
-    z-index: 9999999999;
+.mobileMenu {
+  position: absolute;
+  z-index: 9999999999;
 }
-  
-@media only screen and (max-width:375px){
-    .submenu {
-        width: 200px;
-        left: -36px;
-       
-    }
+
+@media only screen and (max-width: 375px) {
+  .submenu {
+    width: 200px;
+    left: -36px;
+  }
 }

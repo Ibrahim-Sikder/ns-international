@@ -49,3 +49,11 @@
 .text-animation-delay {
   animation: slideInRight 1s ease-out forwards 0.5s; /* Text slide from the right with delay */
 }
+
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

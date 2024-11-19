@@ -21,11 +21,19 @@ import LocationCityIcon from "@mui/icons-material/LocationCity";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Banner from "@/components/shared/Banner/Banner";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-
+import { useEffect } from "react";
+import AOS from "aos";
 const Page = () => {
   const handleSubmit = () => {
     console.log();
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <>
       <Banner title="Contact Us" />
@@ -184,8 +192,8 @@ const Page = () => {
               </NSForm>
             </div>
 
-            <div className="lg:w-full">
-              <div className="space-y-6 mt-10">
+            <div className="lg:w-full" >
+              <div className="space-y-6 mt-10" >
                 <div>
                   <h5 className="border-b-4 border-blue-700 inline-block pb-2">
                     Contact Us
@@ -250,7 +258,7 @@ const Page = () => {
 
                 {/* Social Media  */}
                 <h3 className=" text-gray-800">Our Social Media</h3>
-                <div className="flex flex-wrap justify-start gap-2 mt-4 space-x-1 ">
+                <div className="flex flex-wrap justify-start gap-2 mt-4 space-x-1 " data-aos="fade-left">
                   {/* fb */}
                   <Link href="https://facebook.com" className="">
                     <button className="p-2 bg-blue-600 text-white rounded-full">

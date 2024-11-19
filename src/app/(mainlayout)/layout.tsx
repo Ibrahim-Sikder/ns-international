@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Footer from "@/components/shared/Footer/Footer";
 import Header from "@/components/shared/Header/Header";
-import CompanyMarquee from "@/components/shared/OurPartner/OurPartner";
+import OurPartner from "@/components/shared/OurPartner/OurPartner";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -9,7 +9,7 @@ const layout = ({ children }: { children: ReactNode }) => {
       <Header/>
       
       {children}
-      <CompanyMarquee />
+      <OurPartner />
       <Footer />
     </>
   );

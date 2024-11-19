@@ -66,6 +66,7 @@ const Slider = () => {
         navigation={true}
         pagination={{
           clickable: true,
+          
         }}
         autoplay={{
           delay: 3000,
@@ -74,10 +75,11 @@ const Slider = () => {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         className="mySwiper"
         onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
+        
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[700px]">
+            <div className="relative w-full h-[400px] lg:h-[700px]">
               <Image
                 src={slide.img}
                 alt={`Slide ${index + 1}`}
@@ -102,7 +104,7 @@ const Slider = () => {
                 </motion.h3>
 
                 <motion.h1
-                  className="text-animation"
+                  className="text-animation text-2xl lg:text-4xl"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{
                     opacity: currentSlide === index ? 1 : 0,
