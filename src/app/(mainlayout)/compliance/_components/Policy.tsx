@@ -61,17 +61,15 @@ const Policy = () => {
             >
               <div>
                 <div className="space-y-4">
-                  <p className="bg-white p-4 shadow-md text-justify">
-                    {section.zeroTolerance_Title}
-                  </p>
-                  <p className="bg-white p-4 shadow-md text-justify">
+                  <h3 className="text-center">{section.zeroTolerance_Title}</h3>
+                  <p className="text-justify">
                     {section.zeroTolerance_description}
                   </p>
                 </div>
               </div>
               <div>
                 {section?.zeroToleranceImages?.map((image, i) => (
-                  <div key={i}>
+                  <div key={i} className="grid grid-cols-1 gap-5">
                     <Image
                       src={image}
                       alt=""

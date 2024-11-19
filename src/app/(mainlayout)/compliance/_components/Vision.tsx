@@ -9,6 +9,7 @@ interface Compliance {
   social_compliance_description: string;
   images: string[];
   EmployeesCocCovers: string[];
+  social_compliance_title: string;
 }
 
 interface ApiResponse {
@@ -59,10 +60,11 @@ const Vision = () => {
           >
             <div>
               <div className="space-y-4">
-                <p className="bg-white p-4 shadow-md text-justify">
-                  {section.description}
-                </p>
-                <p className="bg-white p-4 shadow-md text-justify">
+                <h3 className="text-center">
+                  {section.social_compliance_title}
+                </h3>
+                <p className="text-justify">{section.description}</p>
+                <p className="text-justify">
                   {section.social_compliance_description}
                 </p>
               </div>
