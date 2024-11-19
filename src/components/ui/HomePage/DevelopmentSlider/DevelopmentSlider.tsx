@@ -179,21 +179,44 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const DevelopmentSlider = () => {
   const slides = [
-    { image: img1, title: "Sample Development", link: "/sample-development" },
-    { image: img2, title: "Merchandising", link: "/merchandising" },
-    { image: img3, title: "Fabric Sourcing", link: "/fabric-sourcing" },
-    { image: img4, title: "Production", link: "/production" },
-    { image: img5, title: "QA And QC", link: "/qa-qc" },
-    { image: img6, title: "Sample Development", link: "/sample-development" },
-    { image: img7, title: "Merchandising", link: "/merchandising" },
-    { image: img8, title: "Fabric Sourcing", link: "/fabric-sourcing" },
-    { image: img9, title: "Production", link: "/production" },
-    { image: img10, title: "QA And QC", link: "/qa-qc" },
-    { image: img11, title: "Production", link: "/production" },
-    { image: img12, title: "QA And QC", link: "/qa-qc" },
+    {
+      image: img1,
+      title: "Research & Development",
+      link: "/services/Research & Development",
+    },
+    { image: img2, title: "Merchandising", link: "/services/Merchandising" },
+    {
+      image: img3,
+      title: "Fabric Sourcing",
+      link: "/services/Fabric Sourcing",
+    },
+    { image: img4, title: "Production", link: "/services/Production" },
+    { image: img5, title: "QA And QC", link: "/services/QA and QC" },
+    {
+      image: img6,
+      title: "Sample Development",
+      link: "/services/Sample Development",
+    },
+    {
+      image: img7,
+      title: "Delivery and Shipment",
+      link: "/services/Delivery and Shipment",
+    },
+    { image: img8, title: "Knitting", link: "/services/Knitting" },
+    { image: img9, title: "Embroidery", link: "/services/Embroidery" },
+    {
+      image: img10,
+      title: "Garment Dyeing & Wash",
+      link: "/services/Garment Dyeing & Wash",
+    },
+    { image: img11, title: "Printing", link: "/services/Printing" },
+    {
+      image: img12,
+      title: "Trimming & Accessories",
+      link: "/services/Trimming & Accessories",
+    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -206,23 +229,21 @@ const DevelopmentSlider = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: false, 
+      duration: 1000,
+      once: false,
     });
   }, []);
 
-
   return (
     <>
-      <div className="relative w-full h-auto my-7" >
-        
+      <div className="relative w-full h-auto my-7">
         <div className="text-center space-y-4 p-4" data-aos="fade-right">
           <h5 className="text-blue-400 text-base">
             Development, Production & Delivery
           </h5>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold">
             NS International Ensure the Best Production From
-            <span className="text-blue-400">{" "} Every Angle</span>
+            <span className="text-blue-400"> Every Angle</span>
           </h2>
           <h5 className="text-sm md:text-base text-gray-500">
             NS International is the largest peer-to-peer comparison initiative
