@@ -47,7 +47,7 @@ const Decorate = () => {
               Get Decorated With Our Best Products
             </h2>
             <p className="text-gray-300 mb-8">
-              Pellentesque dui diam, tincidunt sit amet ligula viverra sodales.
+              Best Quality Product, Give Good Experience. 
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up"
