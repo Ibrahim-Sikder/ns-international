@@ -1,42 +1,38 @@
-import img1 from "../../../../public/assets/products/woven.jpg";
-import img2 from "../../../../public/assets/products/knit.jpg";
-import img3 from "../../../../public/assets/products/sweater.jpg";
-import img4 from "../../../../public/assets/products/homewear.jpg";
-
+"use client";
 import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
 import Container from "@/components/ui/Container/Container";
 import Link from "next/link";
 import Banner from "@/components/shared/Banner/Banner";
+import { useEffect, useState } from "react";
 
-const products = [
-  {
-    category: "Woven",
-    image: img1,
-    icon: GoArrowUpRight,
-    link: "/products/woven",
-  },
-  {
-    category: "Knit",
-    image: img2,
-    icon: GoArrowUpRight,
-    link: "/products/knit",
-  },
-  {
-    category: "Sweater",
-    image: img3,
-    icon: GoArrowUpRight,
-    link: "/products/sweater",
-  },
-  {
-    category: "Homewear and Others",
-    image: img4,
-    icon: GoArrowUpRight,
-    link: "/products/homewear",
-  },
-];
+interface Products {
+  _id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  images: string[];
+}
+
+interface ProductsResponse {
+  success: boolean;
+  message: string;
+  data: {
+    products: Products[];
+  };
+}
 
 const Products = () => {
+  const [data, setData] = useState<ProductsResponse | null>(null);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/v1/products")
+      .then((response) => response.json())
+      .then((data: ProductsResponse) => setData(data))
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
   return (
     <div className="bg-gray-100">
       <Banner title="Products" />
@@ -49,7 +45,7 @@ const Products = () => {
             NS International Ensures The Best Products
           </h3>
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {products.map((product, index) => (
+            {data?.data?.products.map((product, index) => (
               <div
                 key={index}
                 className="bg-white shadow-lg group p-5 relative"
@@ -61,17 +57,26 @@ const Products = () => {
                 </div>
 
                 <div className="overflow-hidden relative">
-                  <Image
-                    src={product.image}
-                    alt={product.category}
-                    className="w-full h-56 object-cover transition-transform transform group-hover:scale-105"
-                  />
+                  {product?.images?.slice(0, 1).map((image, index) => (
+                    <div key={index} className="w-full h-56">
+                      <Image
+                        src={image}
+                        alt=""
+                        height={56}
+                        width={56}
+                        quality={100}
+                        layout="responsive"
+                        className="w-full h-56  transition-transform
+                      transform group-hover:scale-105"
+                      />
+                    </div>
+                  ))}
+
                   {/* Overlay that appears on hover */}
                   <div className="absolute inset-0 bg-black bg-opacity-70 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    {/* Wrap the icon in a Link component */}
-                    <Link href={product.link}>
+                    <Link href={`/products/${product.category}`}>
                       <button className="text-white text-4xl hover:cursor-pointer">
-                        <product.icon />
+                        <GoArrowUpRight />
                       </button>
                     </Link>
                   </div>

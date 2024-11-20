@@ -23,8 +23,6 @@ import Banner from "@/components/shared/Banner/Banner";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
-
 const Page = () => {
   const handleSubmit = () => {
     console.log();
@@ -44,10 +42,7 @@ const Page = () => {
           {/* top part */}
           <div className="my-5 lg:my-10">
             <div className="lg:flex ">
-              <div
-                className="relative lg:w-1/3 h-64 bg-cover bg-center flex flex-col items-center justify-center content-center lg:p-5"
-                data-aos="fade-right"
-              >
+              <div className="relative lg:w-1/3 h-64 bg-cover bg-center flex flex-col items-center justify-center content-center lg:p-5">
                 <div className="absolute inset-0 -z-10 rounded-t-xl lg:rounded-l-xl">
                   <Image
                     src={img1}
@@ -57,7 +52,7 @@ const Page = () => {
                     priority
                   />
                 </div>
-                <div className="absolute inset-0 bg-black opacity-60 rounded-t-xl lg:rounded-l-xl" />
+                <div className="absolute inset-0 bg-black opacity-60 rounded-t-xl lg:rounded-l-xl"/>
 
                 <div className="absolute text-center text-white space-y-4">
                   <div className="mb-2">
@@ -78,11 +73,8 @@ const Page = () => {
                 </div>
               </div>
 
-              <div
-                className="relative w-[300px] lg:w-1/3 bg-[#EAEAEA] h-[300px] -ml-3 lg:-mt-[22px]  rounded-lg flex flex-col items-center justify-center content-center p-5"
-                data-aos="fade-down"
-              >
-                <div className="absolute inset-0 opacity-50" />
+              <div className="relative w-[300px] lg:w-1/3 bg-[#EAEAEA] h-[300px] -ml-3 lg:-mt-[22px]  rounded-lg flex flex-col items-center justify-center content-center p-5">
+                <div className="absolute inset-0 opacity-50"/>
                 <div className="relative z-10 text-center flex flex-col items-center justify-center space-y-4">
                   <div className="">
                     <LocationOnIcon
@@ -104,11 +96,8 @@ const Page = () => {
                 </div>
               </div>
 
-              <div
-                className="relative lg:w-1/3 h-64 bg-cover bg-center flex flex-col items-center justify-center content-center p-5"
-                data-aos="fade-left"
-              >
-                <div className="absolute inset-0 -z-10 rounded-b-xl lg:rounded-r-xl">
+              <div className="relative lg:w-1/3 h-64 bg-cover bg-center flex flex-col items-center justify-center content-center p-5">
+                <div className="absolute inset-0 -z-10 ">
                   <Image
                     src={img2}
                     alt="Background"
@@ -117,7 +106,7 @@ const Page = () => {
                     priority
                   />
                 </div>
-                <div className="absolute inset-0 bg-black opacity-70 rounded-b-xl lg:rounded-r-xl" />
+                <div className="absolute inset-0 bg-black opacity-70 rounded-b-xl lg:rounded-r-xl"/>
                 <div className="absolute text-center text-white space-y-4">
                   <div className="">
                     <LocationOnIcon
@@ -139,14 +128,15 @@ const Page = () => {
                   <p className="mt-2">m.ziani@nsintbd.com</p>
                 </div>
               </div>
+
             </div>
           </div>
 
           {/* middle part */}
           <div className="lg:max-w-screen-xl grid grid-cols-1 md:grid-cols-2 lg:gap-10 mx-auto  px-1 md:px-8 lg:px-10 py-1 md:py-5 lg:py-5  text-gray-800  justify-center ">
-            <div className="p-2 lg:p-12 shadow-lg border" >
+            <div className="p-2 lg:p-12 shadow-lg border">
               <NSForm onSubmit={handleSubmit}>
-                <div className="space-y-3 lg:space-y-8" data-aos="fade-up-right">
+                <div className="space-y-3 lg:space-y-8">
                   <div>
                     <NSInput
                       name="name"
@@ -216,7 +206,7 @@ const Page = () => {
                   following options.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10" data-aos="fade-left">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="flex items-center space-x-4">
                     <div className="p-4 bg-blue-700 text-white rounded-full">
                       <LocationCityIcon />
