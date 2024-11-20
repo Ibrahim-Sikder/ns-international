@@ -86,7 +86,7 @@ const DevelopmentSlider = () => {
   return (
     <>
       <div className="relative w-full h-auto my-7">
-        <div className="text-center space-y-4 p-4" data-aos="fade-right">
+        <div className="text-center space-y-4 p-4" data-aos="fade-up">
           <h5 className="text-blue-400 text-base">
             Development, Production & Delivery
           </h5>

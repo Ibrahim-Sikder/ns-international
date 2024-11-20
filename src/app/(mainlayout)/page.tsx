@@ -17,7 +17,6 @@ export default function Home() {
         <Testimonials/>
         <Glance/>
         <Decorate />   
-
       </div>
     </>
   );
