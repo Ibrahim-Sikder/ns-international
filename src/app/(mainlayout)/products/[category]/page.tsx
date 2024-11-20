@@ -33,7 +33,7 @@ const CategoryPage = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/products")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/products`)
       .then((response) => response.json() as Promise<ApiResponse>)
       .then((data) => {
         setData(data?.data?.products || []);

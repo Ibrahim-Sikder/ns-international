@@ -22,7 +22,7 @@ const Policy = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/compliance")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/compliance`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => {

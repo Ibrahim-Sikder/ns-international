@@ -4,7 +4,6 @@ import Image from "next/image";
 import Container from "@/components/ui/Container/Container";
 import { useEffect, useState } from "react";
 
-
 interface CSRData {
   csr_title: string;
   csr_short_description: string;
@@ -23,7 +22,7 @@ const CSR = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/compliance")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/compliance`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data.");
@@ -60,10 +59,14 @@ const CSR = () => {
             <div key={index}>
               <div className="space-y-4">
                 <h3 className="text-xl font-bold">{section.csr_title}</h3>
-                <p className="text-justify mt-5">{section.csr_short_description}</p>
+                <p className="text-justify mt-5">
+                  {section.csr_short_description}
+                </p>
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10">
-                <p className="text-justify mt-5 lg:col-span-1">{section.csr_description}</p>
+                <p className="text-justify mt-5 lg:col-span-1">
+                  {section.csr_description}
+                </p>
                 {section.csrImages?.map((image, i) => (
                   <div key={i} className="lg:col-span-1">
                     <Image

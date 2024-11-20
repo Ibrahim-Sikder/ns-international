@@ -25,7 +25,7 @@ const Mission = () => {
   // console.log(data);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/mission")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/mission`)
       .then((response) => response.json())
       .then((data: MissionResponse) => setData(data))
       .catch((error) => {

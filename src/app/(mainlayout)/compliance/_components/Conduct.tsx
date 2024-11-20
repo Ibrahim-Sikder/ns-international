@@ -5,7 +5,6 @@ import Container from "@/components/ui/Container/Container";
 // import Accordion from "./Accordion";
 import { useEffect, useState } from "react";
 
-
 interface Compliance {
   cod_of_conduct_title: string;
   cod_of_conduct_short_description: string;
@@ -24,7 +23,7 @@ const Conduct = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/compliance")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/compliance`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -80,8 +79,8 @@ const Conduct = () => {
               ))}
             </div>
             <p className="text-justify mt-5">
-                {section.cod_of_conduct_description}
-              </p>
+              {section.cod_of_conduct_description}
+            </p>
           </div>
         ))}
 

@@ -10,7 +10,7 @@ const Sidebar = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/services")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/services`)
       .then((response) => response.json())
       .then((data) => {
         setData(data?.data?.services || []);

@@ -39,7 +39,7 @@ const WhoWeAre = () => {
   console.log(data);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/whoweare")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/whoweare`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => console.log("Error fetching data:", error));

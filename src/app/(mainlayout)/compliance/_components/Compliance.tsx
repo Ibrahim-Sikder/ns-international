@@ -21,7 +21,7 @@ const Compliance = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/compliance")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/compliance`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data.");
