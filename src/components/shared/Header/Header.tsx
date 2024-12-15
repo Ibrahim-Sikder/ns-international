@@ -80,6 +80,7 @@ const Header = () => {
         { href: "/products/Homeweare & Others", label: "Homewear & Others" },
       ],
     },
+    { href: "/commitment", label: "Vision & Commitment" },
     { href: "/contact", label: "Contact Us" },
   ];
 

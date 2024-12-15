@@ -6,10 +6,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import PinterestIcon from "@mui/icons-material/Pinterest";
 
 const Footer = () => {
   return (
@@ -25,83 +22,97 @@ const Footer = () => {
               <div className="lg:max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="text-center lg:text-start">
                   {/* <Image src={logo} alt="Background"  className="w-[180px] h-[80px]"  /> */}
-                  <h3 className="text-2xl font-bold text-white mb-4">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     NS International
                   </h3>
-                  <p className="mb-4">Comitted to Best Quality Product</p>
-                  <div className="flex space-x-4 justify-center lg:justify-start">
+                  <p className="mb-4">Efficiency | Quality | Sustainability</p>
+                  <div className="flex gap-2 justify-center lg:justify-start">
                     <Link
                       href="#"
-                      className="p-1 rounded-full border border-gray-500"
+                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
                     >
                       <FacebookIcon
                         sx={{
                           color: "white",
-                          "&:hover": { color: "#1877F2" },
                         }}
                       />
                     </Link>
 
                     <Link
                       href="#"
-                      className="p-1 rounded-full border border-gray-500"
+                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
                     >
                       <XIcon
                         sx={{
                           color: "white",
-                          "&:hover": { color: "gray" },
                         }}
                       />
                     </Link>
 
                     <Link
                       href="#"
-                      className="p-1 rounded-full border border-gray-500"
+                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
                     >
                       <InstagramIcon
                         sx={{
                           color: "white",
-                          "&:hover": { color: "#E1306C" },
                         }}
                       />
                     </Link>
 
                     <Link
                       href="#"
-                      className="p-1 rounded-full border border-gray-500"
+                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
                     >
-                      <YouTubeIcon
-                        sx={{ color: "white", "&:hover": { color: "red" } }}
-                      />
+                      <YouTubeIcon sx={{ color: "white" }} />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
+                    >
+                      <PinterestIcon sx={{ color: "white" }} />
                     </Link>
                   </div>
                 </div>
 
-                <div className="text-center lg:text-start space-y-3">
+                <div className="text-center lg:text-start">
                   <h4 className="text-xl font-semibold text-white mb-4">
-                    Visit Us
+                    Categories
                   </h4>
-                  <div className="flex gap-2 justify-center lg:justify-start lg:items-center">
-                    <FmdGoodOutlinedIcon /> 
-                    <p>House-376/5, East Kazipara, Mirpur, Dhaka-1216</p>
-                  </div>
-                  <div className="flex gap-2 justify-center lg:justify-start  lg:items-center">
-                    <AccessTimeIcon /> 
-                    <p>07:00 AM - 18:00 PM</p>
-                  </div>
-                 
-                  <h4 className="text-xl font-semibold text-white mt-4">
-                    Contact Us
-                  </h4>
-                  <div className="flex gap-2 justify-center lg:justify-start  lg:items-center">
-                    <LocalPhoneIcon />
-                    <p>+880 1917-847198</p>
-                  </div>
-                  <div className="flex gap-2 justify-center lg:justify-start lg:items-center">
-                    <MailOutlineIcon /> 
-                    <p>info@nsintbd.com</p>
-                  </div>             
-                  
+                  <ul className="flex flex-col space-y-2">
+                    <li>
+                      <Link
+                        href="/products/woven"
+                        className="text-gray-400 hover:text-white"
+                      >
+                        Woven
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/products/knit"
+                        className="text-gray-400 hover:text-white"
+                      >
+                        Knit
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/products/sweater"
+                        className="text-gray-400 hover:text-white"
+                      >
+                        Sweater
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/products/Homeweare & Others"
+                        className="text-gray-400 hover:text-white"
+                      >
+                        Homewear & Other
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
 
                 <div className="text-center lg:text-start">
@@ -112,6 +123,11 @@ const Footer = () => {
                     <li>
                       <Link href="/" className="text-gray-400 hover:text-white">
                         Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#" className="text-gray-400 hover:text-white">
+                        FAQ
                       </Link>
                     </li>
                     <li>
@@ -182,14 +198,14 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="mt-8  pt-6">
-                <div className="lg:flex justify-between mx-auto max-w-7xl border-t border-gray-700">
-                  <p className="pt-2 text-sm lg:text-base text-center lg:text-start">
+              <div className="mt-8">
+                <div className="lg:flex justify-between mx-auto max-w-7xl border-t border-gray-700 pt-8">
+                  <p className="text-sm lg:text-base text-center lg:text-start">
                     Copyright © 2024{" "}
                     <span className="text-blue-400">NS International</span>. All
                     Rights Reserved
                   </p>
-                  <div className="flex items-center pt-2 text-sm lg:text-base justify-center">
+                  <div className="flex items-center text-sm lg:text-base justify-center">
                     <Link
                       href="/privacy-policy"
                       className="text-gray-400 hover:text-white"
