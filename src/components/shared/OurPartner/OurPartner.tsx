@@ -23,7 +23,7 @@ const OurPartner = () => {
   const [data, setData] = useState<PartnerResponse | null>(null);
   // console.log(data);
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/brands")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/brands`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => {

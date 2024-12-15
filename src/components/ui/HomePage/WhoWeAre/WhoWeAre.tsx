@@ -39,7 +39,7 @@ const WhoWeAre = () => {
   console.log(data);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/whoweare")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/whoweare`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => console.log("Error fetching data:", error));
@@ -54,10 +54,10 @@ const WhoWeAre = () => {
 
   return (
     <div className="bg-gray-50 pb-2">
-      <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-10 mb-10 px-4 ">
+      <div className="w-[1100px] mx-auto flex flex-col lg:flex-row gap-10 mb-10 px-4 ">
         {/* Left side */}
         <div
-          className="w-full lg:w-[500px] p-3 lg:p-6 bg-white z-10 -mt-10 lg:-mt-20 "
+          className="w-full lg:w-[600px] p-3 lg:p-6 bg-white z-10 -mt-10 lg:-mt-20 "
           data-aos="fade-right"
         >
           <div className="py-10">
@@ -109,7 +109,6 @@ const WhoWeAre = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-center items-center content-center gap-4">
                   <div className="space-y-4">
-                    {/* Card 1 */}
                     <div
                       className="bg-white p-4 border rounded-md border-gray-300 text-center shadow-md"
                       data-aos="fade-left"
@@ -121,7 +120,6 @@ const WhoWeAre = () => {
                       <p className="text-gray-600">Trusted Clients</p>
                     </div>
 
-                    {/* Card 2 */}
                     <div
                       className="bg-white p-4 border rounded-md border-gray-300 text-center shadow-md"
                       data-aos="fade-left"
@@ -135,7 +133,6 @@ const WhoWeAre = () => {
                       <p className="text-gray-600">Shipments</p>
                     </div>
 
-                    {/* Card 3 */}
                     <div
                       className="bg-white p-4 border rounded-md border-gray-300 text-center shadow-md"
                       data-aos="fade-left"
@@ -153,7 +150,6 @@ const WhoWeAre = () => {
                     </div>
                   </div>
                   <div className="space-y-4">
-                    {/* Card 4 */}
                     <div
                       className="bg-white p-4 border rounded-md border-gray-300 text-center shadow-md"
                       data-aos="fade-left"
@@ -170,7 +166,6 @@ const WhoWeAre = () => {
                       <p className="text-gray-600">Visited Conference</p>
                     </div>
 
-                    {/* Card 5 */}
                     <div
                       className="bg-white p-4 border rounded-md border-gray-300 text-center shadow-md"
                       data-aos="fade-left"
@@ -187,7 +182,6 @@ const WhoWeAre = () => {
                     </div>
                   </div>
                   <div>
-                    {/* Card 6 */}
                     <div
                       className="bg-white p-4 border rounded-md border-gray-300 text-center shadow-md"
                       data-aos="fade-left"
@@ -198,7 +192,7 @@ const WhoWeAre = () => {
                           start={0}
                           end={item?.visited_conference}
                           duration={2}
-                        />{" "}
+                        />
                         +
                       </div>
                       <p className="text-gray-600">pcs/month production</p>

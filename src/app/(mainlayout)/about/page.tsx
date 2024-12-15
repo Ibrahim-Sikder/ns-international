@@ -26,7 +26,7 @@ const Page = () => {
   const [data, setData] = useState<AboutResponse | null>(null);
   console.log(data);
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/about")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/about`)
       .then((response) => response.json())
       .then((data: AboutResponse) => setData(data))
       .catch((error) => {

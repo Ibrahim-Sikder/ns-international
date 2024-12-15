@@ -28,7 +28,7 @@ const Testimonials: React.FC = () => {
   const [data, setData] = useState<ApiResponse | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/review")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/review`)
       .then((response) => response.json())
       .then((data: ApiResponse) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));

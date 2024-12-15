@@ -14,8 +14,8 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import logo from "../../../../public/assets/logo/nsinternational.png";
-import location from "../../../../public/assets/icon/location23.png";
-import chat from "../../../../public/assets/icon/chat1.png";
+import location from "../../../../public/assets/icon/location2.png";
+import chat from "../../../../public/assets/icon/conversation.png";
 import "./Header.css";
 import SubHeader from "./SubHeader";
 
@@ -84,7 +84,7 @@ const Header = () => {
   ];
 
   const navMenu = (
-    <ul className="flex flex-col lg:flex-row gap-3 lg:items-center">
+    <ul className="flex flex-col lg:flex-row gap-3 lg:items-center bg-white lg:bg-[#222429] lg:text-white uppercase">
       {menuItems.map((item, index) => (
         <li key={index} className="relative group">
           {/* Large Screen Menu */}
@@ -182,17 +182,10 @@ const Header = () => {
             alt="logo"
           />
           <div className="lg:flex hidden">{navMenu}</div>
-          <div className="flex gap-6">
-            <Image
-              src={location}
-              className="h-auto lg:h-[40px] w-[30px]"
-              alt="location Icon"
-            />
-            <Image
-              src={chat}
-              className="h-auto lg:h-[40px] w-[40px]"
-              alt="location Icon"
-            />
+          <div className="flex gap-5">
+            <Image src={location} className="w-8" alt="location Icon" />
+            <span className="border-r border-gray-600"></span>
+            <Image src={chat} className="w-8" alt="location Icon" />
           </div>
           <div className="lg:hidden px-2">
             <button className="p-1 text-white" onClick={toggleNavbar}>

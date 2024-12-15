@@ -31,7 +31,9 @@ const CategoryPage = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/v1/services");
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_BASE_API_URL}/services`
+        );
         const result = (await response.json()) as ApiResponse;
         setData(result?.data?.services || []);
         setLoading(false);

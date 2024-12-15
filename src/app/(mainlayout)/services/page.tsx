@@ -26,7 +26,7 @@ const Services = () => {
   console.log(data);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/services")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/services`)
       .then((response) => response.json() as Promise<ApiResponse>)
       .then((data) => setData(data))
       .catch((error) => {

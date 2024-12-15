@@ -26,7 +26,7 @@ interface ProductsResponse {
 const Products = () => {
   const [data, setData] = useState<ProductsResponse | null>(null);
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/products")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/products`)
       .then((response) => response.json())
       .then((data: ProductsResponse) => setData(data))
       .catch((error) => {
