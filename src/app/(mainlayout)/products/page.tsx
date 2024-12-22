@@ -5,21 +5,15 @@ import Container from "@/components/ui/Container/Container";
 import Link from "next/link";
 import Banner from "@/components/shared/Banner/Banner";
 import { useEffect, useState } from "react";
+import { TProduct } from "@/types/type";
 
-interface Products {
-  _id: string;
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  images: string[];
-}
+
 
 interface ProductsResponse {
   success: boolean;
   message: string;
   data: {
-    products: Products[];
+    products: TProduct[];
   };
 }
 
@@ -52,7 +46,7 @@ const Products = () => {
               >
                 <div className="flex justify-center">
                   <div className="absolute top-0 z-10 bg-blue-600 text-white px-4 py-2 shadow-md">
-                    <h4 className="text-sm">{product.category}</h4>
+                    <h4 className="text-sm">{product.category.name}</h4>
                   </div>
                 </div>
 
@@ -74,7 +68,7 @@ const Products = () => {
 
                   {/* Overlay that appears on hover */}
                   <div className="absolute inset-0 bg-black bg-opacity-70 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Link href={`/products/${product.category}`}>
+                    <Link href={`/products/${product.category.name}`}>
                       <button className="text-white text-4xl hover:cursor-pointer">
                         <GoArrowUpRight />
                       </button>

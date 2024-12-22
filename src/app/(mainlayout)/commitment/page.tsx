@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaHandsHelping, FaLightbulb, FaHeart, FaCheck } from "react-icons/fa";
 import img1 from "../../../../public/assets/about/commitment.jpg";
 import Container from "@/components/ui/Container/Container";
+import Mission from "../about/_components/Mission";
 
 export default function VisionAndCommitment() {
   return (
@@ -10,6 +11,7 @@ export default function VisionAndCommitment() {
       <Banner title="Vision & Commitment" />
 
       <Container>
+      <Mission />
         {/* Vision Statement */}
         <div className="py-20 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Vision</h2>
@@ -84,6 +86,7 @@ export default function VisionAndCommitment() {
             </div>
           </div>
         </div>
+      
       </Container>
     </div>
   );

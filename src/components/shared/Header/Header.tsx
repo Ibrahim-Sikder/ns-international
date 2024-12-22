@@ -13,7 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import logo from "../../../../public/assets/logo/nsinternational.png";
+import logo from "../../../../src/assets/images/logo/singleLogo.png";
 import location from "../../../../public/assets/icon/location2.png";
 import chat from "../../../../public/assets/icon/conversation.png";
 import "./Header.css";
@@ -92,11 +92,10 @@ const Header = () => {
           <div className="hidden lg:block">
             <Link
               href={item.href || "#"}
-              className={`flex gap-1 items-center mr-3 pr-5 ${
-                currentPath === item.href
-                  ? "text-blue-500"
-                  : "hover:text-blue-500"
-              }`}
+              className={`flex gap-1 items-center mr-3 pr-5 ${currentPath === item.href
+                ? "text-blue-500"
+                : "hover:text-blue-500"
+                }`}
               onClick={closeSidebar}
             >
               {item.label}
@@ -107,9 +106,8 @@ const Header = () => {
                   <li key={subIndex}>
                     <Link
                       href={subItem.href}
-                      className={`text-sm ${
-                        currentPath === subItem.href ? "text-blue-500" : ""
-                      }`}
+                      className={`text-sm ${currentPath === subItem.href ? "text-blue-500" : ""
+                        }`}
                       onClick={closeSidebar}
                     >
                       {subItem.label}
@@ -141,11 +139,10 @@ const Header = () => {
                       <li key={subIndex} className="py-1">
                         <Link
                           href={subItem.href}
-                          className={`text-sm block ${
-                            currentPath === subItem.href
-                              ? "text-blue-500 font-bold"
-                              : ""
-                          }`}
+                          className={`text-sm block ${currentPath === subItem.href
+                            ? "text-blue-500 font-bold"
+                            : ""
+                            }`}
                           onClick={closeSidebar}
                         >
                           {subItem.label}
@@ -158,9 +155,8 @@ const Header = () => {
             ) : (
               <Link
                 href={item.href || "#"}
-                className={`block py-2 px-4 ${
-                  currentPath === item.href ? "text-blue-500 font-bold" : ""
-                }`}
+                className={`block py-2 px-4 ${currentPath === item.href ? "text-blue-500 font-bold" : ""
+                  }`}
                 onClick={closeSidebar}
               >
                 {item.label}
@@ -177,11 +173,14 @@ const Header = () => {
       <SubHeader />
       <div className="h-16 lg:h-20 py-1 w-full bg-[#222429] sticky top-0 z-20">
         <div className="w-full lg:h-20 items-center justify-between flex gap-20 px-5 lg:px-24 pt-[5px]">
-          <Image
-            src={logo}
-            className="h-auto lg:h-16 w-[70px] lg:w-28"
-            alt="logo"
-          />
+          <div className="flex items-center ">
+            <Image
+              src={logo}
+              className="h-auto lg:h-16 w-[70px] lg:w-28"
+              alt="logo"
+            />
+            <h5 className="text-white">NS INTERFANATIONAL</h5>
+          </div>
           <div className="lg:flex hidden">{navMenu}</div>
           <div className="flex gap-5">
             <Image src={location} className="w-8" alt="location Icon" />

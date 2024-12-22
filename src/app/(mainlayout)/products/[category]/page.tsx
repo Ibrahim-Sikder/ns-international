@@ -14,7 +14,10 @@ import Image from "next/image";
 type Product = {
   _id: string;
   title: string;
-  category: string[];
+  category:{
+    name:string,
+    _id:string,
+  };
   images: string[];
 };
 
@@ -48,16 +51,16 @@ const CategoryPage = () => {
   useEffect(() => {
     if (category && data.length > 0) {
       const decodedCategory = decodeURIComponent(category);
-
+  
       // Filter products by decoded category, case-insensitively
-      const filtered = data.filter((product) =>
-        product.category.some(
-          (cat) => cat.toLowerCase() === decodedCategory.toLowerCase()
-        )
+      const filtered = data.filter(
+        (product) =>
+          product?.category?.name?.toLowerCase() === decodedCategory.toLowerCase()
       );
       setFilteredProducts(filtered);
     }
   }, [category, data]);
+  
 
   if (loading) {
     return <div className="text-center py-20">Loading...</div>;

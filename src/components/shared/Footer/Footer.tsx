@@ -29,55 +29,75 @@ const Footer = () => {
                   <div className="flex gap-2 justify-center lg:justify-start">
                     <Link
                       href="#"
-                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
+                      className="p-2 border border-gray-500 group"
                     >
                       <FacebookIcon
                         sx={{
-                          color: "white",
+                          color: "gray",
+                          "&:hover": { color: "#1877F2" },
                         }}
+                        className="group-hover:text-[#1877F2]"
                       />
                     </Link>
 
                     <Link
                       href="#"
-                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
+                      className="p-2 border border-gray-500 group"
                     >
                       <XIcon
                         sx={{
-                          color: "white",
+                          color: "gray",
+                          "&:hover": { color: "#1DA1F2" },
                         }}
+                        className="group-hover:text-[#1DA1F2]"
                       />
                     </Link>
 
                     <Link
                       href="#"
-                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
+                      className="p-2 border border-gray-500 group"
                     >
                       <InstagramIcon
                         sx={{
-                          color: "white",
+                          color: "gray",
+                          "&:hover": { color: "#E4405F" },
                         }}
+                        className="group-hover:text-[#E4405F]"
                       />
                     </Link>
 
                     <Link
                       href="#"
-                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
+                      className="p-2 border border-gray-500 group"
                     >
-                      <YouTubeIcon sx={{ color: "white" }} />
+                      <YouTubeIcon
+                        sx={{
+                          color: "gray",
+                          "&:hover": { color: "#FF0000" },
+                        }}
+                        className="group-hover:text-[#FF0000]"
+                      />
                     </Link>
+
                     <Link
                       href="#"
-                      className="p-2 border border-gray-500 hover:bg-[#2563EB]"
+                      className="p-2 border border-gray-500 group"
                     >
-                      <PinterestIcon sx={{ color: "white" }} />
+                      <PinterestIcon
+                        sx={{
+                          color: "gray",
+                          "&:hover": { color: "#E60023" },
+                        }}
+                        className="group-hover:text-[#E60023]"
+                      />
                     </Link>
                   </div>
+
                 </div>
 
                 <div className="text-center lg:text-start">
                   <h4 className="text-xl font-semibold text-white mb-4">
-                    Categories
+                    Products
                   </h4>
                   <ul className="flex flex-col space-y-2">
                     <li>
@@ -135,7 +155,7 @@ const Footer = () => {
                         href="/about"
                         className=" text-gray-400 hover:text-white"
                       >
-                        About
+                        About Us
                       </Link>
                     </li>
                     <li>
@@ -148,10 +168,26 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/projects"
+                        href="#"
                         className="text-gray-400 hover:text-white"
                       >
                         Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/compliance"
+                        className="text-gray-400 hover:text-white"
+                      >
+                        compliance Compliance & Ethics
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="text-gray-400 hover:text-white"
+                      >
+                        Blog
                       </Link>
                     </li>
                   </ul>
